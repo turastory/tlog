@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"pageContext":{}},
-    "staticQueryHashes": []}
+    "result": {"data":{"site":{"siteMetadata":{"title":"Turastory"}},"allMarkdownRemark":{"nodes":[{"excerpt":"블로그를 직접 만들어보고 싶어서 Gatsby를 써서 블로그를 만들었다.","fields":{"slug":"/start/"},"frontmatter":{"date":"December 31, 2021","title":"새 블로그","description":"내 블로그를 직접 만들어보고 싶어졌다."}}]}},"pageContext":{}},
+    "staticQueryHashes": ["2841359383"]}
