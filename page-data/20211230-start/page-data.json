@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/20211230-start/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Turastory"}},"markdownRemark":{"id":"907902a1-ef35-5881-a8fe-0435fa371da4","excerpt":"블로그를 직접 만들어보고 싶어서 Gatsby를 써서 블로그를 만들었다.","html":"<p>블로그를 직접 만들어보고 싶어서 Gatsby를 써서 블로그를 만들었다.</p>","frontmatter":{"title":"새 블로그","date":"December 31, 2021","description":"내 블로그를 직접 만들어보고 싶어졌다."}},"previous":{"fields":{"slug":"/20211218-eternal-return-site/post/"},"frontmatter":{"title":"이터널 리턴 전적 검색 사이트를 만들어보았다"}},"next":null},"pageContext":{"id":"907902a1-ef35-5881-a8fe-0435fa371da4","previousPostId":"8398fe3a-011f-56ca-8803-fb21f16c5eea","nextPostId":null}},
+    "staticQueryHashes": ["2841359383"]}
