@@ -2,6 +2,9 @@
 title: 이터널 리턴 전적 검색 사이트를 만들어보았다
 date: "2021-12-18"
 description: "ER.OP.GG - 이터널 리턴 전적 검색 사이트를 만들어보았다."
+tags:
+  - retrospective
+  - experience
 ---
 
 _[er.op.gg 사이트](https://er.op.gg)_

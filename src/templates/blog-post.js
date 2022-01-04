@@ -8,6 +8,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
+  const tags = post.frontmatter.tags;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -22,6 +23,16 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          {/* TODO: Link for tags */}
+          {tags ? (
+            <div class="tag">
+              {tags.map((tag) => (
+                <a>{tag}</a>
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -80,6 +91,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

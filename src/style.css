@@ -55,6 +55,8 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
+  --color-tag: #5f3f33;
+  --color-tag-background: #f0eeeb;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -313,6 +315,21 @@ a:focus {
 
 .blog-post-nav ul {
   margin: var(--spacing-0);
+}
+
+.blog-post div.tag {
+  margin-bottom: var(--spacing-4);
+}
+
+.blog-post div.tag a {
+  display: inline-block;
+  font-family: var(--fontFamily-sans);
+  font-size: 12px;
+  color: var(--color-tag);
+  background-color: var(--color-tag-background);
+  padding: 0.2rem 0.3rem;
+  border-radius: 3px;
+  margin-right: var(--spacing-1);
 }
 
 .gatsby-highlight {
