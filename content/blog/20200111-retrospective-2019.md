@@ -2,6 +2,7 @@
 title: 2019년 돌아보기
 date: "2020-01-11"
 description: "2019년 회고."
+category: post
 tags:
   - retrospective
   - essay
