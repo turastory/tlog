@@ -136,9 +136,9 @@ fun MainUi(state: MainUiState) {
 
 ```kotlin
 Columns {
-  SomeLayout(state.items1) { register(it) }
-  SomeLayout(state.items2) { register(it) }
-  SomeLayout(state.items3) { register(it) }
+    SomeLayout(state.items1) { register(it) }
+    SomeLayout(state.items2) { register(it) }
+    SomeLayout(state.items3) { register(it) }
 }
 ```
 
