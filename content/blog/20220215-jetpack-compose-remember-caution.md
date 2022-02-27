@@ -1,7 +1,7 @@
 ---
 title: Jetpack Compose - remember()와 method reference 사용 시 주의점
 date: "2022-02-15"
-category: snippet
+category: post
 tags:
   - kotlin
   - android
