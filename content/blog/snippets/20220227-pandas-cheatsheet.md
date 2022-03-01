@@ -10,7 +10,7 @@ tags:
 
 ## By use case
 
-#### Filter rows
+###Filter rows
 
 ```python
 1. df[df[column_name] == some_value]
@@ -20,7 +20,7 @@ tags:
 5. s[s == some_value]
 ```
 
-#### Convert multi-index series to dataframe
+###Convert multi-index series to dataframe
 
 ```python
 Series.unstack
@@ -28,7 +28,7 @@ Series.unstack
 
 https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-series-to-a-dataframe-by-using-second-index-as-c
 
-#### Convert index of dataframe to a column
+###Convert index of dataframe to a column
 
 ```python
 1. df[column_name] = df.index
@@ -36,7 +36,7 @@ https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-ser
 3. df.reset_index(level=0, inplace=True)
 ```
 
-#### Rename columns
+###Rename columns
 
 ```python
 result.rename(columns={ category: 'item_code' })
@@ -44,7 +44,7 @@ result.rename(columns={ category: 'item_code' })
 
 https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column
 
-#### Split a single row into multiple rows
+###Split a single row into multiple rows
 
 ```python
 DataFrame.explode
@@ -53,7 +53,7 @@ Series.explode
 
 https://stackoverflow.com/questions/50731229/split-cell-into-multiple-rows-in-pandas-dataframe
 
-#### Group by - sort within groups
+###Group by - sort within groups
 
 ```python
 # We need to sort within depth2, so group by depth2 and aggergate.
@@ -82,14 +82,14 @@ https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups
 
 헷갈리는 Pandas의 매핑 함수들에 대해 정리해보았다.
 
-#### [GroupBy.apply](https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.apply.html)
+###[GroupBy.apply](https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.apply.html)
 
 > Apply function func group-wise and combine the results together.
 
 - group에 속한 Row를 가지고 있는 `DataFrame`을 함수 인자로 받는다. 다음과 같이 apply에 넘기는 lambda 함수에서 print를 해보면 알 수 있다.
 - 함수에서는 DataFrame, Series, Scalar 등 다양한 값을 리턴할 수 있다.
 
-#### [DataFrame.apply](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html)
+###[DataFrame.apply](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html)
 
 > Apply a function along input axis of DataFrame.
 
@@ -101,7 +101,7 @@ https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups
 - 함수에서는 Series나 Scalar를 리턴해야 한다.
 - `result_type`을 통해 함수에서 리턴하는 값들이 어떻게 묶이는지 결정할 수 있다.
 
-#### [DataFrame.applymap](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.applymap.html)
+###[DataFrame.applymap](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.applymap.html)
 
 > Apply a function to a Dataframe elementwise
 
@@ -113,7 +113,7 @@ https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups
 - `DataFrame.apply` - 전체 row나 column에 적용됨.
 - `DataFrame.applymap`, `Series.apply`, `Series.map` - 각각의 요소에 적용됨.
 
-#### `Series.apply`와 `Series.map`의 차이점
+###`Series.apply`와 `Series.map`의 차이점
 
 둘 모두 개별 요소에 함수가 적용되지만(element-wise), 리턴할 수 있는 형태가 다르다.
 
