@@ -1,93 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Here I recording my development stories]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 27 Feb 2022 11:37:23 GMT</lastBuildDate><item><title><![CDATA[Pandas Cheatsheet]]></title><description><![CDATA[By use case Filter rows Convert multi-index series to dataframe https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index…]]></description><link>https://turastory.com/snippets/20220227-pandas-cheatsheet/</link><guid isPermaLink="false">https://turastory.com/snippets/20220227-pandas-cheatsheet/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;By use case&lt;/h2&gt;
-&lt;h4&gt;Filter rows&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; some_value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;some_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;some_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond3&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; some_value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;Convert multi-index series to dataframe&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;Series&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;unstack&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-series-to-a-dataframe-by-using-second-index-as-c&quot;&gt;https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-series-to-a-dataframe-by-using-second-index-as-c&lt;/a&gt;&lt;/p&gt;
-&lt;h4&gt;Convert index of dataframe to a column&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index
-&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;insert&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; column_name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inplace&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;Rename columns&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rename&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;columns&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; category&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;item_code&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column&quot;&gt;https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column&lt;/a&gt;&lt;/p&gt;
-&lt;h4&gt;Split a single row into multiple rows&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;DataFrame&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;explode
-Series&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;explode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/50731229/split-cell-into-multiple-rows-in-pandas-dataframe&quot;&gt;https://stackoverflow.com/questions/50731229/split-cell-into-multiple-rows-in-pandas-dataframe&lt;/a&gt;&lt;/p&gt;
-&lt;h4&gt;Group by - sort within groups&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# We need to sort within depth2, so group by depth2 and aggergate.&lt;/span&gt;
-agg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;agg&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;total_size&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# sort within the groups, take the most N rows.&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# Note: pass group_keys=False to avoid receiving indices in subsequent apply() function.&lt;/span&gt;
-count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;
-result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; agg&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; group_keys&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sort_values&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;by&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;total_size&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ascending&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;iloc&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# Optional - join the most N rows to a single row&lt;/span&gt;
-result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; group_keys&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups&quot;&gt;https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;Mapping Functions&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;map vs apply vs applymap vs transform&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;헷갈리는 Pandas의 매핑 함수들에 대해 정리해보았다.&lt;/p&gt;
-&lt;h4&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.apply.html&quot;&gt;GroupBy.apply&lt;/a&gt;&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Apply function func group-wise and combine the results together.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;group에 속한 Row를 가지고 있는 &lt;code class=&quot;language-text&quot;&gt;DataFrame&lt;/code&gt;을 함수 인자로 받는다. 다음과 같이 apply에 넘기는 lambda 함수에서 print를 해보면 알 수 있다.&lt;/li&gt;
-&lt;li&gt;함수에서는 DataFrame, Series, Scalar 등 다양한 값을 리턴할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html&quot;&gt;DataFrame.apply&lt;/a&gt;&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Apply a function along input axis of DataFrame.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;DataFrame의 row나 column을 함수 인자로 받는다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;axis: 0 or index - 각각의 column에 적용&lt;/li&gt;
-&lt;li&gt;axis: 1 or columns - 각각의 row에 적용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;함수에서는 Series나 Scalar를 리턴해야 한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;result_type&lt;/code&gt;을 통해 함수에서 리턴하는 값들이 어떻게 묶이는지 결정할 수 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.applymap.html&quot;&gt;DataFrame.applymap&lt;/a&gt;&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Apply a function to a Dataframe elementwise&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;DataFrame의 모든 값을 각각 함수 인자로 받는다.&lt;/li&gt;
-&lt;li&gt;함수에서는 Scalar를 리턴해야 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Element-wise?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DataFrame.apply&lt;/code&gt; - 전체 row나 column에 적용됨.&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DataFrame.applymap&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt; - 각각의 요소에 적용됨.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;의 차이점&lt;/h4&gt;
-&lt;p&gt;둘 모두 개별 요소에 함수가 적용되지만(element-wise), 리턴할 수 있는 형태가 다르다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;에 전달되는 함수는 개별 요소나 &lt;code class=&quot;language-text&quot;&gt;Series&lt;/code&gt;를 리턴할 수 있음&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 개별 요소만 리턴할 수 있음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Here I recording my development stories]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Mar 2022 01:07:19 GMT</lastBuildDate><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 296px; &quot;
@@ -117,119 +28,181 @@ result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;나는 유닛 테스트와 통합 테스트를 서로 다른 소스셋으로 구분하고 싶어서 기존의 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt;는 그대로 둔 채로 &lt;code class=&quot;language-text&quot;&gt;unitTest&lt;/code&gt;라는 소스셋을 새로 추가했다. &lt;code class=&quot;language-text&quot;&gt;build.gradle.kts&lt;/code&gt;에서 아래와 같이 새로운 소스셋을 추가할 수 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Create a new sourceSet for unitTests&lt;/span&gt;
+&lt;p&gt;나는 유닛 테스트와 통합 테스트를 서로 다른 소스셋으로 구분하고 싶어서 기존의 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt;는 그대로 둔 채로 &lt;code class=&quot;language-text&quot;&gt;integrationTest&lt;/code&gt;라는 소스셋을 새로 추가했다. &lt;code class=&quot;language-text&quot;&gt;build.gradle.kts&lt;/code&gt;에서 아래와 같이 새로운 소스셋을 추가할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Create a new sourceSet for integration tests&lt;/span&gt;
 sourceSets &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;unitTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;integrationTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         java &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            compileClasspath &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;compileClasspath &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;compileClasspath
-            runtimeClasspath &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;runtimeClasspath &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;runtimeClasspath
-            &lt;span class=&quot;token function&quot;&gt;srcDir&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;src/unitTest/kotlin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            compileClasspath &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;output &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;output
+            runtimeClasspath &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;output &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;output
+            &lt;span class=&quot;token function&quot;&gt;srcDir&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;src/integrationTest/kotlin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;여기서 주목할 만한 부분은 &lt;code class=&quot;language-text&quot;&gt;classpath&lt;/code&gt;를 설정하는 부분이다. 기존에 테스트를 작성할 때는 별도의 설정 없이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; 소스셋의 클래스들을 가져다 사용할 수 있었다. 이는 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 소스셋에서 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;의 클래스패스를 참조하기 때문에 그렇다. 마찬가지로 &lt;code class=&quot;language-text&quot;&gt;unitTest&lt;/code&gt;에서도 테스트를 위한 디펜던시들에 접근해야 하기 때문에 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt;의 클래스패스를 새로운 소스셋의 클래스패스에 추가해주었다.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; integrationTestImplementation &lt;span class=&quot;token keyword&quot;&gt;by&lt;/span&gt; configurations&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getting&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;extendsFrom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;configurations&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;testImplementation&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+configurations&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;integrationTestRuntimeOnly&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;extendsFrom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;configurations&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;testRuntimeOnly&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;여기서 주목할 만한 부분은 &lt;code class=&quot;language-text&quot;&gt;classpath&lt;/code&gt;를 설정하는 부분이다. 기존에 테스트를 작성할 때는 별도의 설정 없이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; 소스셋의 클래스들을 가져다 사용할 수 있었다. 이는 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 소스셋에서 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;의 클래스패스를 참조하기 때문에 그렇다. 마찬가지로 &lt;code class=&quot;language-text&quot;&gt;integrationTest&lt;/code&gt;에서도 테스트를 위한 디펜던시들에 접근해야 하기 때문에 &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt;의 빌드 결과를 새로운 소스셋의 클래스패스에 추가해주었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSetOutput.html&quot;&gt;공식 문서&lt;/a&gt;에서 SourceSet의 output에 대한 설명을 찾을 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A collection of all output directories (compiled classes, processed resources, etc.) - notice that SourceSetOutput extends FileCollection.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;여기까지 작성했다면 IDE의 파일 트리에 새로운 소스셋이 추가된 것을 확인할 수 있다. 그런데 Intellij가 해당 소스셋을 테스트 소스셋으로 인식하지 않는다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 240px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ee932bae7df5ab08f5ed3abc5acf3dac/8ff5a/not-a-test-source-set.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 162.65822784810126%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFgUlEQVRIx42WyXMbxxXG+Qfk5FQqx9ySlCupmJKwDgazDzDY930nSJAESADcRZFiJFGWLLOc2K4ohyhVcVWSS3LKwf/ez9VNgQWJZOzDV90z0/3Ne6/f+16vuF6SdK5AUFFpDreYP72k0hmg2y7im5fKYMU8wlEdRTN+FCuOlyRXquALhels7nD17p/Mn76kUm9ycHzCZHdGo90loKg/jTCkanKxsEA1bQw3jma7RHRDQiwynNgHFoo9i/nHlq8sf1B1E9Uwpfterki+3sZ144QiUUJRXf5YkBmOSzASvSFbJr0hFAu8dJZmpyfdH4xn/Om7/1A9e021O+Dzz19xeHzCsxcvOL/4IyenT4ia9m0LxYtlRHRTkiczeYobO/zs6/+hNfrUq1VavQGj7TGNdodqo4VmOZJE7JHjsoUfx0S47Q8phAybiGlLV1d9flb9QVZ9AVZ9QXwhBX848h4qvnDkwxh+PFcNC18gSGMw4vLbv7F1cCrDUq41bqFQrlJtNG9buEwoXPGHFQqNDmdffsv45IJSrSFjuHdwyNrGiPHulNneAd3BUMb4XpfFKGIp52oUJRgkHAgSNSziqYw8ceGycFPMg6om199p4XVqxHCTGZRQmM9KHX69dcof8g0sL4lm2vJAkpkcqWwe043LfaK67iQUfxIVVGm2Ufx+ftfd4ZO/fM8vzt5S6vQ5PDpiMp1xcHTM9mSXvcMjEuksphO7P4YifiKZlaiG33T5LFngoZclajmyvsXhiFoXP7bjnrRYHOL/JVzkpNiUTGXQdJtgRONBIMTDQIhHwfA1RCxDiozlvS67iRT1dpcHPj/t0YSrv/+LzemEXLHI+ua2POFOf8BgfUMmem9tne5g7f48FC7Y8QQBJUK6VGM02+OLyQOqJY96Z8BwYyQJBPrDdTr9NZmPN6W3ON2F8ii6Kef+9+mx+siHYSgEwmFZJcsVspgHlKW0EWTCTaGNwqr6YMTjl1/SaXXJF0tSNBLZAvlShXa3f1O/t/RwYaEItunEyeRLMtCtwYjzb97x6Z//S3ZtizevX/H02XOev7iU6aLqFmFVZIHxgbisqJaJhG2hmAZhXZPzqG2ixD1+dfCSYDKLaVyLr+46aI79fr0uEVlwWCYrbtnjA1Q8nFIcr5YiVU+T8FTcvoW1a2K1bBL1NLFyQq7JtHLkOgVilQROOS73r4gPyxAvraJLrl2kvzPEzCZw9izsf4TQvgjSnfY5vnjM7PGcx8+eMD/d5/jihFK/ilVw7yYUY7yalHCKHnbLwdo2sDcs0q0szVGH5qhNddigMqhRHtRINbNy372EYrSLMexSjFQ9T7pWxMl7mAUXNa2jpg2iGZNoxkDLmug5CzPv3EFY8qTp2XaB7vYALaPTmW7z/Ju3bB7vS9fWpyMGO0M62z05Njba9MYDiRVxCMuIVa8DLFwoDypo5STztsr4wuHqXGe4VWR8POfw4ojZ6fwaT/aYns5Zn49YMZIOC2ieRTRuyrmesFHsKGHXIJbQsdIRcvkIhqcTsFSClkrY0VBjBoqrS2gJixWRnAKh94mdSOcIhCOUmj3Gh2fUy1WihoNhJ7DiGfKlKvVmh+HGFtlCCd1y5VXGS2Vvl56QKdEzRF/ubU549e7fKFffUd4Y83pRKZeXnJ6dM9vf5+qrr2R/ef3mDb21oaz5e8VBt2z0dJ6fn/8VJVMk53mYtosVi8vL0+IyJeo/lkjJZ1l698mXFFjRJx494FE8w+8zVQK6daNCojnJ64totSHlpqHdSbgQ2FqnLzvdp/0pn7z9nl+efE2p3WM82ZECO9s/YHM8YbI7lW3h3q63EFjDiaMoER6mS/xmdMxvW9s4qSytTleqtLjyFStVyrW6FGMRsh8ArzDfHmOX38YAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;does not recognize as test source set&quot;
-        title=&quot;does not recognize as test source set&quot;
-        src=&quot;/static/ee932bae7df5ab08f5ed3abc5acf3dac/8ff5a/not-a-test-source-set.png&quot;
-        srcset=&quot;/static/ee932bae7df5ab08f5ed3abc5acf3dac/c26ae/not-a-test-source-set.png 158w,
-/static/ee932bae7df5ab08f5ed3abc5acf3dac/8ff5a/not-a-test-source-set.png 240w&quot;
-        sizes=&quot;(max-width: 240px) 100vw, 240px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;이를 위해서는 idea 플러그인을 추가하고, &lt;code class=&quot;language-text&quot;&gt;testSourceDirs&lt;/code&gt;에 새로 추가한 소스셋을 등록하면 된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;plugins &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     idea
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;token comment&quot;&gt;// Register unitTest sourceSet as a test sourceSet.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// Register integrationTest sourceSet as a test sourceSet.&lt;/span&gt;
 idea&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; testSources &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; testSourceDirs
-    testSources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;project&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sourceSets&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;unitTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;srcDirs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    testSources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;project&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sourceSets&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;integrationTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;srcDirs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token comment&quot;&gt;// This line is redundant, but I just keep it as a reference.&lt;/span&gt;
-    testSources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;project&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sourceSets&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;unitTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;resources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;srcDirs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    testSources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addAll&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;project&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sourceSets&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;integrationTest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;resources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;srcDirs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     testSourceDirs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; testSources
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 206px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 286px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2d856a1952fed87dc596437c57520a77/a414c/test-source-set.png&quot;
+    href=&quot;/static/a53c37a0a88681b319ec85f78714b5bc/357e3/test-source-set.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 175.9493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAYAAACU9ioYAAAACXBIWXMAABYlAAAWJQFJUiTwAAAGPklEQVRIx21W224i2RXlJxK1Eo2iaB7mMcmk3RjqRt2p4l4UBYW5X43BBmxsfME2vrW7ezTuabXSo84oGUVRFOUtL/m+FZ2N8WC7HxZnnzqcVbvWWXtXBcJiBEFOILBYkFXCWphH6H5tLcQhyIkUc5JM85AgUcz2sHGJAB9RkMxkkXJcBMM88rUWZt99xGi8j7gdQ9r1UKrWEEtl4OZ9VBtN+KUKZM14IH1EuM6LSDouUtkcXgZDyNc7ePvDJ6R/+i/+2D/BbDrF7dvvML+8wvd373F+cYnbN2/h5PJ4FeafE7Kf1UeWDAtx3cCL2V/w1e4tdEmCGrVhJ9NIpB1EYwkYVgwRVX/2uET49GJYkMCyFjgeAi9ANi3Scm09TBkx/V6ucxSzJF4xhHnaw+aPCB/iiLI4IEXD8e0dZu8+oLG9C9W04BZ85ApFQtYrwM0XkC9uIJV1aR54lN0TckHWMD67we2PP2P7+AIZN4fz+QVOTs8wHO+i1dnE0ckM470JyrU6XQ88JWPjKrGiqFCNKERVh6Kb8EtlaFELEc2gdVk3KZYUDVrUfp4h8yCzEtMyLMn4NuYgKOsI8wsPLnTkaVz+d+lLfnnKq4SioqFcb9JiSNbw2/lnvLj9J37Xm8HJeag1W+RHNnY2t9De7JEv2T6W6SNCdhdJ1eF4BYRFCSFZxdfja/zm6u/4ajBHxvWwOznA5taAiBrtDnZGY9RbbSKTVwlXNaQSu9dyjdlBlBFauTHTTYgolBV75OV1du2LGrIsSZOIgrTnw4glISgmQkKE/LZ270EWL/23jL+oYa3VWdxRVnF+9wk3Hz+jt70JO5FEp9dHs9NFrdlGsVxBpd4g/zHbMAmeaci0YLW9yFZBd2+GyXSI680/IJtNotHuodcfELq9PmnZ396hQ6q3OotKWfXeOifgz6/WKX3Sk5cgKyJKDgcxIlEbe1q//H1lMVD7WoJlaKUcamGGnSCzsozXeQnfhkRaZweyWgBPQRkWShX45SrW1kModbbw/ud/4+T7T0jkN3AwneL0fI796RSTgynO5hdU01/qhdRtQrwEIaJClDW8CnGI54oY9of4/Y//w4ujj6j7eUwOj0iv0XgP7W4PsmaC7ePE+0yFXxCQTA2ioRJYLBgqeCmMP1XbeFmqQxQlcLICXpHBqRFwWgSSqUIwFPC6DEFXHvYyBIycBcNbQM9FYRXiSFddRNMKolkV+kSF0dehlQ0kSmnEikmYnk2j28jDqeVoTjw5CwHdjYLBcC0aGWFvsg3Di0HLW1DvOKh/C0G8CqLab+Do4hhbkwH2ZvuEw4tj7ByOEPOT0LLmCmHunjAfR7KUgZaNwvCi0Ecq9CMFyrYMp5pDZ7yJ9qiLylaN0Bp2UOyUYRcStD+wTHWVVMnov8RJFXJchZbSKYNIWoXqGFAcnUY5o0HNGrT25QwLcbj1PC2aXgz9szk6+xM4rRrNkxtpyoaB/df2F5mxebyYeqwhIyEN9wZ0A8uL4+h0B2cfrjCfVbDRKeBwfoLD+TEOzg4xPBxj92SCwcEORke7mMwOEGCna95jecrxYhK6ZyGZtTBvfQNnyuHtaA1ePQm/W0ZtUEdt0CAwHZmmxW4JfqfEfKiSnxikqEb+4lQJIUUCz/zJ/GXIMGwJoiEjKAsIKSLW78ewKiEY4WlkewOcpMCw4jDtBIJhAVm/guHsCrV6G5ZpUQWppg0zlkLW8+FvVNDubqFSa0A1LOhRm9oX41jnRARYTbrsPesX6VOk2Orh7q//QOvzf8C3hjiY7OH69hY3r1/j4uqa6nowHOH9Dx9weX2Ny+sbvHn3Dp5fxFqYWzQH6riciBAvQrWTyKcz+NWbf+HX0/fw02kUylXE0xn6nomnMvQ5wmL2jmEvLBZrpk1dKaAkDahJk8BiOaFDMCXIaRtKxoZoyxBMhfQVbeUBnClBsGQI1iKW4zrtDyzreFnLzFflrRpMZiXPhH4jwbiUoQ5k5JoFFDobcGouit0yVUltu4lcI49oPva8lpkPmUFbwy6MnA09H4X6RoD6UwgCq+WtOs5fX2B0vIv90wOMj/cwuzolDzJTU6UsS29ZKcvO8VA9NQN6U4dW0elmTtWF1/SRKjvIVF2aJzZStI/V8v8B9elDIS3g32oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 82.91139240506328%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAADF0lEQVQ4y4WUWU8bSRRG+++MNNIIJQEb416rN2946bbbC6GxAZtgNyYJtlkCgRAmIZqHeZmXmad5nD95Rl1gNEuUPBzdrqrvfnVburcU2yuQ0wy6ewd0Oj18z8MtlXGLJYkuHEzHxbBdvFKZzUaALmycQonedoxbLMszv1yRPkqlFrCWUzm7/pnmb3/hjGfcXl1xfDLj0+d7bj7c8u7yPecXl1xeXfPh9o7Tswtm81Oub25ZnJ7L/ZP5KdkNDSVn6qiOwLA0ftg74ll3B2GY6MJFcwW1VkipUUW1LXRXYPoOouihuzaG52D4DlbBk/upRnGbBezApRaHVGoOTk/HutIQI4sgblHp1WjETbrDLZqDCCf0EQ0XO/CeEMHDOj1TloJwEFGK6lixjfh1A/NcZZgccHI5Y3h8wHiWkMynbPZqiMAjLSTN/SepqbJ0Fg0Hq+6wrNis2XKdXpbGJWbdxnyK9lNly2oVJ3iosDlo47eKVOM2i7t7tsf7NLZDOsMtWrsdot0OYT+ivd+T39Fel2i3i9cqPpo9Vug0fezQoxGH2O1N4sji5KbCYlZg53CL8fyIyTxh9OYVk8WRjP1kl/FswuFsQrFTkfmpT4qiuhaaJySqa2LaGhvWc1w/Q85SyRh58raB7i81Fvqj/mso5WqDtfU8J9efSd59pNhoMTpI6Gz12d0fMT1+g+0VpWY9r0uyj/FrKMIrkFF1dnYGrNz/yWpyQTLcYzSecDhJmEyP8UoVMhsqOd2Q0/AtlGxeI6ebaJZNVnhkDMHKizV+evaCldUMz7M5pEYzWFf17xvWw5ZMOLv7haObLwRbMa/fvuUwOWK2OCNotVldz7OhmU+m30JRLUFWM2hHHX78+Dsrwzn9qEsvHtDf25cPQvq7y4TvVmhVHUTNxShbGFUfo+mQj1TyJQOtZGFUBE7Dxw9LOHWfpd6qujL+F9mH6Sx2Ry+pd0PEwEL8kcN6r3IwPSQ5ncreSxZTSblblXrZd+H/UZYjIzfSbm+72K8Eoi+ovwzlo1CPQ4KdlsSPSg/6wP/XA7Ecvb8BbdySfdz8gzUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;recognize as test source set&quot;
         title=&quot;recognize as test source set&quot;
-        src=&quot;/static/2d856a1952fed87dc596437c57520a77/a414c/test-source-set.png&quot;
-        srcset=&quot;/static/2d856a1952fed87dc596437c57520a77/c26ae/test-source-set.png 158w,
-/static/2d856a1952fed87dc596437c57520a77/a414c/test-source-set.png 206w&quot;
-        sizes=&quot;(max-width: 206px) 100vw, 206px&quot;
+        src=&quot;/static/a53c37a0a88681b319ec85f78714b5bc/357e3/test-source-set.png&quot;
+        srcset=&quot;/static/a53c37a0a88681b319ec85f78714b5bc/c26ae/test-source-set.png 158w,
+/static/a53c37a0a88681b319ec85f78714b5bc/357e3/test-source-set.png 286w&quot;
+        sizes=&quot;(max-width: 286px) 100vw, 286px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/20220216-ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
-&lt;h3&gt;Bezier Curve&lt;/h3&gt;
+&lt;p&gt;마지막으로 해결해야 하는 문제는 새로 만든 소스셋에서 main이 아닌 다른 소스셋(가령 test)의 코드를 가져다쓸 수 있게 하는 것이다. 지금 이대로 사용할 경우 유닛 테스트에서 만든 테스트 데이터를 &lt;code class=&quot;language-text&quot;&gt;integrationTest&lt;/code&gt; 소스셋에서는 사용할 수 없다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;task(&quot;integrationTest&quot;, Test::class) {
+    testClassesDirs = sourceSets[&quot;integrationTest&quot;].output
+    classpath = sourceSets[&quot;integrationTest&quot;].runtimeClasspath
+}
+
+
+val integrationTestImplementation: Configuration by configurations.getting {
+    extendsFrom(configurations.testImplementation.get())
+}
+
+configurations {
+    getByName(&quot;integrationTestRuntimeOnly&quot;) {
+        extendsFrom(configurations.testRuntimeOnly.get())
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;References&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;베지어 곡선 = N개의 점으로부터 만들어지는 곡선&lt;/li&gt;
-&lt;li&gt;2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용&lt;/li&gt;
-&lt;li&gt;3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;TTF&lt;/h2&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/java_testing.html#sec:configuring_java_integration_tests&quot;&gt;https://docs.gradle.org/current/userguide/java_testing.html#sec:configuring_java_integration_tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://rio-kim.github.io/testing/2017/12/20/gradle_test_sourceset_config/&quot;&gt;https://rio-kim.github.io/testing/2017/12/20/gradle_test_sourceset_config/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pandas Cheatsheet]]></title><description><![CDATA[By use case ###Filter rows ###Convert multi-index series to dataframe https://stackoverflow.com/questions/44142591/converting-a-pandas-multi…]]></description><link>https://turastory.com/snippets/20220227-pandas-cheatsheet/</link><guid isPermaLink="false">https://turastory.com/snippets/20220227-pandas-cheatsheet/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;By use case&lt;/h2&gt;
+&lt;p&gt;###Filter rows&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; some_value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;some_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;some_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cond3&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;s &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; some_value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;###Convert multi-index series to dataframe&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;Series&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;unstack&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-series-to-a-dataframe-by-using-second-index-as-c&quot;&gt;https://stackoverflow.com/questions/44142591/converting-a-pandas-multi-index-series-to-a-dataframe-by-using-second-index-as-c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;###Convert index of dataframe to a column&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index
+&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;insert&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; column_name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inplace&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;###Rename columns&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rename&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;columns&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; category&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;item_code&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column&quot;&gt;https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;###Split a single row into multiple rows&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;DataFrame&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;explode
+Series&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;explode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/50731229/split-cell-into-multiple-rows-in-pandas-dataframe&quot;&gt;https://stackoverflow.com/questions/50731229/split-cell-into-multiple-rows-in-pandas-dataframe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;###Group by - sort within groups&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# We need to sort within depth2, so group by depth2 and aggergate.&lt;/span&gt;
+agg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;agg&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;total_size&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &apos;size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# sort within the groups, take the most N rows.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Note: pass group_keys=False to avoid receiving indices in subsequent apply() function.&lt;/span&gt;
+count &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;
+result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; agg&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; group_keys&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sort_values&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;by&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;total_size&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ascending&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;iloc&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Optional - join the most N rows to a single row&lt;/span&gt;
+result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;groupby&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; group_keys&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;lambda&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;depth2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups&quot;&gt;https://stackoverflow.com/questions/27842613/pandas-groupby-sort-within-groups&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Mapping Functions&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;map vs apply vs applymap vs transform&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;헷갈리는 Pandas의 매핑 함수들에 대해 정리해보았다.&lt;/p&gt;
+&lt;p&gt;###&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.apply.html&quot;&gt;GroupBy.apply&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apply function func group-wise and combine the results together.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;1980년대 후반 개발&lt;/li&gt;
-&lt;li&gt;TTF = True Type Font&lt;/li&gt;
-&lt;li&gt;MS와 Apple이 Adobe에 대항하기 위해 제작&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quadratic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
-&lt;li&gt;OTF보다 빠름&lt;/li&gt;
-&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
-&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;없음&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;group에 속한 Row를 가지고 있는 &lt;code class=&quot;language-text&quot;&gt;DataFrame&lt;/code&gt;을 함수 인자로 받는다. 다음과 같이 apply에 넘기는 lambda 함수에서 print를 해보면 알 수 있다.&lt;/li&gt;
+&lt;li&gt;함수에서는 DataFrame, Series, Scalar 등 다양한 값을 리턴할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;-&gt; 문서 작업에 적합&lt;/p&gt;
-&lt;h2&gt;OTF&lt;/h2&gt;
+&lt;p&gt;###&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html&quot;&gt;DataFrame.apply&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apply a function along input axis of DataFrame.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;1996년 개발&lt;/li&gt;
-&lt;li&gt;OTF = Open Type Font&lt;/li&gt;
-&lt;li&gt;MS와 Adobe가 제작&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cubic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
-&lt;li&gt;TTF보다 섬세함&lt;/li&gt;
-&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
-&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;있음&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DataFrame의 row나 column을 함수 인자로 받는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;axis: 0 or index - 각각의 column에 적용&lt;/li&gt;
+&lt;li&gt;axis: 1 or columns - 각각의 row에 적용&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/20220216-kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;함수에서는 Series나 Scalar를 리턴해야 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;result_type&lt;/code&gt;을 통해 함수에서 리턴하는 값들이 어떻게 묶이는지 결정할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###&lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.applymap.html&quot;&gt;DataFrame.applymap&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apply a function to a Dataframe elementwise&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;DataFrame의 모든 값을 각각 함수 인자로 받는다.&lt;/li&gt;
+&lt;li&gt;함수에서는 Scalar를 리턴해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Element-wise?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DataFrame.apply&lt;/code&gt; - 전체 row나 column에 적용됨.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DataFrame.applymap&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt; - 각각의 요소에 적용됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;의 차이점&lt;/p&gt;
+&lt;p&gt;둘 모두 개별 요소에 함수가 적용되지만(element-wise), 리턴할 수 있는 형태가 다르다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;에 전달되는 함수는 개별 요소나 &lt;code class=&quot;language-text&quot;&gt;Series&lt;/code&gt;를 리턴할 수 있음&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 개별 요소만 리턴할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/20220216-kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
 &lt;h3&gt;What is kubeconfig&lt;/h3&gt;
 &lt;p&gt;kubeconfig 파일은 클러스터, 유저, 네임스페이스, 인증 등 *&lt;em&gt;클러스터 접근&lt;/em&gt;에 대한 정보를 담고 있는 파일이다.&lt;/p&gt;
 &lt;h3&gt;Where is it&lt;/h3&gt;
@@ -273,7 +246,35 @@ idea&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;방법은 사실 허탈할 정도로 간단하다. 다음과 같이 kubeconfig 파일의 내용을 복사한 다음, GitHub 설정에 secret으로 등록하고 사용하면 된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;경우에 따라 base64 인코딩이 필요하기도 한데, 이럴 때는 쉘에 base64 유틸이 내장되어 있으니 이를 사용하면 된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | base64 | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/20220216-useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | base64 | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/20220216-ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
+&lt;h3&gt;Bezier Curve&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;베지어 곡선 = N개의 점으로부터 만들어지는 곡선&lt;/li&gt;
+&lt;li&gt;2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용&lt;/li&gt;
+&lt;li&gt;3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TTF&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1980년대 후반 개발&lt;/li&gt;
+&lt;li&gt;TTF = True Type Font&lt;/li&gt;
+&lt;li&gt;MS와 Apple이 Adobe에 대항하기 위해 제작&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quadratic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
+&lt;li&gt;OTF보다 빠름&lt;/li&gt;
+&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
+&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;없음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; 문서 작업에 적합&lt;/p&gt;
+&lt;h2&gt;OTF&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1996년 개발&lt;/li&gt;
+&lt;li&gt;OTF = Open Type Font&lt;/li&gt;
+&lt;li&gt;MS와 Adobe가 제작&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cubic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
+&lt;li&gt;TTF보다 섬세함&lt;/li&gt;
+&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
+&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;있음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/20220216-useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
 &lt;h3&gt;바로 이전 커밋의 메시지 변경&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;과거 N번째 커밋의 메시지 변경&lt;/h3&gt;
@@ -383,7 +384,22 @@ button&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;근데 그렇게 머리아프게 고민할 시간에 그냥 람다를 쓰자.. method reference를 사용했을 때 가독성이 좋은 몇몇 부분들이 있어 여러 방면으로 혼용했었는데,
 Compose를 사용할 때는 이런 문제를 피하기 위해서라도 가급적 람다를 사용해야겠다.&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;좀 더 디테일한 구현상 차이는 &lt;a href=&quot;https://proandroiddev.com/kotlin-lambda-vs-method-reference-fdbd175f6845&quot;&gt;Lambda vs Method Reference&lt;/a&gt; 포스트를 참고.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Android Studio에서 keystore 생성 시 주의점]]></title><description><![CDATA[Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다. 혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.]]></description><link>https://turastory.com/snippets/20220210-android-studio-keystore/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-android-studio-keystore/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다.&lt;/p&gt;
+&lt;p&gt;좀 더 디테일한 구현상 차이는 &lt;a href=&quot;https://proandroiddev.com/kotlin-lambda-vs-method-reference-fdbd175f6845&quot;&gt;Lambda vs Method Reference&lt;/a&gt; 포스트를 참고.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제]]></title><description><![CDATA[Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 , 를 사용하면 내부 구현이 EmptySet으로 되어 있어서 () merge…]]></description><link>https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 &lt;code class=&quot;language-text&quot;&gt;setOf()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Collections.toSet()&lt;/code&gt;를 사용하면 내부 구현이 EmptySet으로 되어 있어서 (&lt;code class=&quot;language-text&quot;&gt;Set&amp;lt;Nothing&gt;&lt;/code&gt;) merge할 때 &lt;code class=&quot;language-text&quot;&gt;ClassCastException&lt;/code&gt;이 발생한다.&lt;/p&gt;
+&lt;p&gt;대신 &lt;code class=&quot;language-text&quot;&gt;HashSet&lt;/code&gt;을 사용하면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 선언&lt;/span&gt;
+&lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Set&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OtherModel&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hashSetOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 리스트 변환&lt;/span&gt;
+model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toHashSet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;동일한 문제가 &lt;code class=&quot;language-text&quot;&gt;listOf()&lt;/code&gt;에 대해서도 발생하는 것을 확인했다. 리스트를 사용할 경우에는 &lt;code class=&quot;language-text&quot;&gt;listOf()&lt;/code&gt; 대신 &lt;code class=&quot;language-text&quot;&gt;arrayListOf()&lt;/code&gt;를 사용하면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 선언&lt;/span&gt;
+&lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OtherModel&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;arrayListOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Android Studio에서 keystore 생성 시 주의점]]></title><description><![CDATA[Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다. 혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.]]></description><link>https://turastory.com/snippets/20220210-android-studio-keystore/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-android-studio-keystore/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다.&lt;/p&gt;
 &lt;p&gt;혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -446,22 +462,7 @@ Compose를 사용할 때는 이런 문제를 피하기 위해서라도 가급적
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제]]></title><description><![CDATA[Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 , 를 사용하면 내부 구현이 EmptySet으로 되어 있어서 () merge…]]></description><link>https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 &lt;code class=&quot;language-text&quot;&gt;setOf()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Collections.toSet()&lt;/code&gt;를 사용하면 내부 구현이 EmptySet으로 되어 있어서 (&lt;code class=&quot;language-text&quot;&gt;Set&amp;lt;Nothing&gt;&lt;/code&gt;) merge할 때 &lt;code class=&quot;language-text&quot;&gt;ClassCastException&lt;/code&gt;이 발생한다.&lt;/p&gt;
-&lt;p&gt;대신 &lt;code class=&quot;language-text&quot;&gt;HashSet&lt;/code&gt;을 사용하면 된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 선언&lt;/span&gt;
-&lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Set&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OtherModel&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hashSetOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;// 리스트 변환&lt;/span&gt;
-model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toHashSet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;동일한 문제가 &lt;code class=&quot;language-text&quot;&gt;listOf()&lt;/code&gt;에 대해서도 발생하는 것을 확인했다. 리스트를 사용할 경우에는 &lt;code class=&quot;language-text&quot;&gt;listOf()&lt;/code&gt; 대신 &lt;code class=&quot;language-text&quot;&gt;arrayListOf()&lt;/code&gt;를 사용하면 된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 선언&lt;/span&gt;
-&lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OtherModel&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;arrayListOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[이터널 리턴 전적 검색 사이트를 만들어보았다]]></title><description><![CDATA[er.op.gg 사이트 작년 10월, 블랙서바이벌: 영원회귀 - 지금은 이터널 리턴이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로…]]></description><link>https://turastory.com/20211218-eternal-return-site/</link><guid isPermaLink="false">https://turastory.com/20211218-eternal-return-site/</guid><pubDate>Sat, 18 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://er.op.gg&quot;&gt;er.op.gg 사이트&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[이터널 리턴 전적 검색 사이트를 만들어보았다]]></title><description><![CDATA[er.op.gg 사이트 작년 10월, 블랙서바이벌: 영원회귀 - 지금은 이터널 리턴이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로…]]></description><link>https://turastory.com/20211218-eternal-return-site/</link><guid isPermaLink="false">https://turastory.com/20211218-eternal-return-site/</guid><pubDate>Sat, 18 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://er.op.gg&quot;&gt;er.op.gg 사이트&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;작년 10월, &lt;strong&gt;블랙서바이벌: 영원회귀&lt;/strong&gt; - 지금은 &lt;strong&gt;이터널 리턴&lt;/strong&gt;이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로 1달간 훈련소에 다녀와야 했는데, 훈련소에서 나오면 어떤 것들을 할지 곰곰히 생각을 해봤다.&lt;/p&gt;
 &lt;p&gt;고민 끝에 내린 결론은 뭐든 간에 만드는 것보다 연구하는 걸 해보고 싶다는 생각이었다. 그렇게 생각했다.&lt;/p&gt;
 &lt;p&gt;근데 막상 나오니까 또 생각이 바뀌더라. 경제적인 것들에 대한 관심과 함께 내가 만든 사이트나 제품으로 돈을 벌어보고 싶다는 욕심이 생겼다. 친구와 같이 이야기를 하면서, 이터널 리턴이라는 게임의 통계 사이트를 한 번 만들어보기로 했다. 경쟁 대상이 되는 사이트가 아직 존재하지 않았기 때문에 심리적인 부담도 그리 크지는 않았다.&lt;/p&gt;
