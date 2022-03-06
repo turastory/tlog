@@ -1,5 +1,6 @@
 ---
 title: Pandas Cheatsheet
+description: Pandas 쓰면서 자주 사용하는 레시피들 모음
 category: snippet
 tags:
   - python
