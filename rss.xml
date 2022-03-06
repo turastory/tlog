@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Here I recording my development stories]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Mar 2022 09:07:07 GMT</lastBuildDate><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[이런 저런 개발 이야기]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Mar 2022 09:07:09 GMT</lastBuildDate><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 296px; &quot;
@@ -202,7 +202,21 @@ result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;에 전달되는 함수는 개별 요소나 &lt;code class=&quot;language-text&quot;&gt;Series&lt;/code&gt;를 리턴할 수 있음&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 개별 요소만 리턴할 수 있음&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
+&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
+&lt;h3&gt;바로 이전 커밋의 메시지 변경&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;과거 N번째 커밋의 메시지 변경&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase -i HEAD~N&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이후 원하는 커밋에 pick -&gt; reword 후 메시지 작성&lt;/p&gt;
+&lt;h2&gt;작업 내용 저장&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 현재 작업 영역에 있는 모든 내용 저장
+git stash push
+
+# stash할 때 메시지 지정
+git stash push -m &amp;lt;message&gt;
+
+# 한 개의 파일만 stash (~ Git 2.13)
+git stash push &amp;lt;path-to-file&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
 &lt;h3&gt;Bezier Curve&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;베지어 곡선 = N개의 점으로부터 만들어지는 곡선&lt;/li&gt;
@@ -230,21 +244,7 @@ result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&
 &lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
 &lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;있음&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
-&lt;h3&gt;바로 이전 커밋의 메시지 변경&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;과거 N번째 커밋의 메시지 변경&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase -i HEAD~N&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이후 원하는 커밋에 pick -&gt; reword 후 메시지 작성&lt;/p&gt;
-&lt;h2&gt;작업 내용 저장&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 현재 작업 영역에 있는 모든 내용 저장
-git stash push
-
-# stash할 때 메시지 지정
-git stash push -m &amp;lt;message&gt;
-
-# 한 개의 파일만 stash (~ Git 2.13)
-git stash push &amp;lt;path-to-file&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
+&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
 &lt;h3&gt;What is kubeconfig&lt;/h3&gt;
 &lt;p&gt;kubeconfig 파일은 클러스터, 유저, 네임스페이스, 인증 등 *&lt;em&gt;클러스터 접근&lt;/em&gt;에 대한 정보를 담고 있는 파일이다.&lt;/p&gt;
 &lt;h3&gt;Where is it&lt;/h3&gt;
