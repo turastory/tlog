@@ -1,4 +1,4 @@
-const siteUrl = `https://turastory.com/`;
+const siteUrl = `https://blog.turastory.com/`;
 
 module.exports = {
   siteMetadata: {
