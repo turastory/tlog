@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import PostHeader from "../components/post-header";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
@@ -21,20 +22,16 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {/* TODO: Link for tags */}
-          {tags ? (
-            <div class="tag">
-              {tags.map((tag) => (
-                <a>{tag}</a>
-              ))}
-            </div>
-          ) : (
-            ""
-          )}
-          <p>{post.frontmatter.date}</p>
-        </header>
+        <PostHeader post={post} />
+        {tags ? (
+          <div class="tag">
+            {tags.map((tag) => (
+              <a>{tag}</a>
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -85,12 +82,16 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       excerpt(pruneLength: 160)
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
+        category
         tags
       }
     }

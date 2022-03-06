@@ -9,7 +9,7 @@ const Categories = ({ categories, activeCategory }) => {
   const allInserted = [{ category: "All", count: totalCount }, ...categories];
 
   return (
-    <div className="category">
+    <div className="category-buttons">
       {allInserted.map(({ category, count }) => {
         const isAll = category === "All";
         const isActive = isAll

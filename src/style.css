@@ -242,8 +242,9 @@ a:hover {
 
 /* Custom classes */
 
-.category {
+.category-buttons {
   display: flex;
+  padding-bottom: var(--spacing-4);
 }
 
 .category-item > * {
@@ -293,7 +294,7 @@ a:hover {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-8);
 }
 
 .main-heading {
@@ -310,22 +311,17 @@ a:hover {
   margin-bottom: var(--spacing-0);
 }
 
-.post-list-item h2 {
-  font-size: var(--fontSize-4);
+.post-header {
   color: var(--color-text);
+  margin-bottom: var(--spacing-4);
+}
+
+.post-header .header {
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
 }
 
-.post-list-item h2:hover {
-  color: var(--color-primary);
-}
-
-.post-list-item header {
-  margin-bottom: var(--spacing-4);
-}
-
-.post-list-item .category {
+.post-header .category {
   display: inline-block;
   font-size: var(--fontSize-0);
   font-weight: bold;
@@ -352,15 +348,6 @@ a:hover {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
-}
-
-.blog-post header h1 {
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
-}
-
-.blog-post header p {
-  font-size: var(--fontSize-2);
-  font-family: var(--font-heading);
 }
 
 .blog-post-nav ul {
