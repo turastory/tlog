@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Here I recording my development stories]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Mar 2022 01:07:19 GMT</lastBuildDate><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/20220227-source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Here I recording my development stories]]></description><link>https://turastory.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Mar 2022 03:58:55 GMT</lastBuildDate><item><title><![CDATA[Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)]]></title><description><![CDATA[Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 ,  두 가지의 source set…]]></description><link>https://turastory.com/source-set-in-kotlin-gradle-dsl/</link><guid isPermaLink="false">https://turastory.com/source-set-in-kotlin-gradle-dsl/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 296px; &quot;
@@ -113,7 +113,7 @@ configurations {
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.gradle.org/current/userguide/java_testing.html#sec:configuring_java_integration_tests&quot;&gt;https://docs.gradle.org/current/userguide/java_testing.html#sec:configuring_java_integration_tests&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://rio-kim.github.io/testing/2017/12/20/gradle_test_sourceset_config/&quot;&gt;https://rio-kim.github.io/testing/2017/12/20/gradle_test_sourceset_config/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pandas Cheatsheet]]></title><description><![CDATA[By use case ###Filter rows ###Convert multi-index series to dataframe https://stackoverflow.com/questions/44142591/converting-a-pandas-multi…]]></description><link>https://turastory.com/snippets/20220227-pandas-cheatsheet/</link><guid isPermaLink="false">https://turastory.com/snippets/20220227-pandas-cheatsheet/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;By use case&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pandas Cheatsheet]]></title><description><![CDATA[By use case ###Filter rows ###Convert multi-index series to dataframe https://stackoverflow.com/questions/44142591/converting-a-pandas-multi…]]></description><link>https://turastory.com/snippets/pandas-cheatsheet/</link><guid isPermaLink="false">https://turastory.com/snippets/pandas-cheatsheet/</guid><pubDate>Sun, 27 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;By use case&lt;/h2&gt;
 &lt;p&gt;###Filter rows&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; some_value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;column_name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;some_values&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
@@ -202,7 +202,49 @@ result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;에 전달되는 함수는 개별 요소나 &lt;code class=&quot;language-text&quot;&gt;Series&lt;/code&gt;를 리턴할 수 있음&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 개별 요소만 리턴할 수 있음&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/20220216-kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
+&lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;Series.map&lt;/code&gt;은 변환 전/후의 차원이 유지되는 반면 &lt;code class=&quot;language-text&quot;&gt;Series.apply&lt;/code&gt;는 변환 후의 차원이 변할 수 있음. (Series -&gt; DataFrame이 될 수 있다)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
+&lt;h3&gt;Bezier Curve&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;베지어 곡선 = N개의 점으로부터 만들어지는 곡선&lt;/li&gt;
+&lt;li&gt;2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용&lt;/li&gt;
+&lt;li&gt;3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TTF&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1980년대 후반 개발&lt;/li&gt;
+&lt;li&gt;TTF = True Type Font&lt;/li&gt;
+&lt;li&gt;MS와 Apple이 Adobe에 대항하기 위해 제작&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quadratic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
+&lt;li&gt;OTF보다 빠름&lt;/li&gt;
+&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
+&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;없음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; 문서 작업에 적합&lt;/p&gt;
+&lt;h2&gt;OTF&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1996년 개발&lt;/li&gt;
+&lt;li&gt;OTF = Open Type Font&lt;/li&gt;
+&lt;li&gt;MS와 Adobe가 제작&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cubic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
+&lt;li&gt;TTF보다 섬세함&lt;/li&gt;
+&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
+&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;있음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
+&lt;h3&gt;바로 이전 커밋의 메시지 변경&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;과거 N번째 커밋의 메시지 변경&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase -i HEAD~N&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이후 원하는 커밋에 pick -&gt; reword 후 메시지 작성&lt;/p&gt;
+&lt;h2&gt;작업 내용 저장&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 현재 작업 영역에 있는 모든 내용 저장
+git stash push
+
+# stash할 때 메시지 지정
+git stash push -m &amp;lt;message&gt;
+
+# 한 개의 파일만 stash (~ Git 2.13)
+git stash push &amp;lt;path-to-file&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[kubeconfig 정리]]></title><description><![CDATA[GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다. What is kubeconfig kubeconfig…]]></description><link>https://turastory.com/snippets/kubeconfig/</link><guid isPermaLink="false">https://turastory.com/snippets/kubeconfig/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Actions를 사용해 배포 스크립트를 작성하다가 kubeconfig 파일에 관한 부분이 헷갈려 정리해보았다.&lt;/p&gt;
 &lt;h3&gt;What is kubeconfig&lt;/h3&gt;
 &lt;p&gt;kubeconfig 파일은 클러스터, 유저, 네임스페이스, 인증 등 *&lt;em&gt;클러스터 접근&lt;/em&gt;에 대한 정보를 담고 있는 파일이다.&lt;/p&gt;
 &lt;h3&gt;Where is it&lt;/h3&gt;
@@ -246,49 +288,7 @@ result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;reset_index&
 &lt;p&gt;방법은 사실 허탈할 정도로 간단하다. 다음과 같이 kubeconfig 파일의 내용을 복사한 다음, GitHub 설정에 secret으로 등록하고 사용하면 된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;경우에 따라 base64 인코딩이 필요하기도 한데, 이럴 때는 쉘에 base64 유틸이 내장되어 있으니 이를 사용하면 된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | base64 | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[TTF vs OTF 차이점]]></title><description><![CDATA[Glossaries Bezier Curve 베지어 곡선 = N개의 점으로부터 만들어지는 곡선 2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용 3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용 TTF 198…]]></description><link>https://turastory.com/snippets/20220216-ttf-vs-otf/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-ttf-vs-otf/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Glossaries&lt;/h2&gt;
-&lt;h3&gt;Bezier Curve&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;베지어 곡선 = N개의 점으로부터 만들어지는 곡선&lt;/li&gt;
-&lt;li&gt;2차 배지어 곡선 (Quadratic Bezier) = 2개의 점 사용&lt;/li&gt;
-&lt;li&gt;3차 배지어 곡선 (Cubic Bezier) = 3개의 점 사용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;TTF&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;1980년대 후반 개발&lt;/li&gt;
-&lt;li&gt;TTF = True Type Font&lt;/li&gt;
-&lt;li&gt;MS와 Apple이 Adobe에 대항하기 위해 제작&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quadratic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
-&lt;li&gt;OTF보다 빠름&lt;/li&gt;
-&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
-&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;없음&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;-&gt; 문서 작업에 적합&lt;/p&gt;
-&lt;h2&gt;OTF&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;1996년 개발&lt;/li&gt;
-&lt;li&gt;OTF = Open Type Font&lt;/li&gt;
-&lt;li&gt;MS와 Adobe가 제작&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cubic Bezier&lt;/strong&gt; 사용&lt;/li&gt;
-&lt;li&gt;TTF보다 섬세함&lt;/li&gt;
-&lt;li&gt;모든 응용 소프트웨어에서 사용 가능&lt;/li&gt;
-&lt;li&gt;라이트/볼드/이탤릭 등의 가족체를 하나로 묶을 수 &lt;strong&gt;있음&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;-&gt; 그래픽 디자인, 출력물에 적합&lt;/p&gt;</content:encoded></item><item><title><![CDATA[유용한 Git 레시피 몇 가지]]></title><description><![CDATA[커밋 이름 변경 바로 이전 커밋의 메시지 변경 과거 N번째 커밋의 메시지 변경 이후 원하는 커밋에 pick -> reword 후 메시지 작성 작업 내용 저장]]></description><link>https://turastory.com/snippets/20220216-useful-git-recipes/</link><guid isPermaLink="false">https://turastory.com/snippets/20220216-useful-git-recipes/</guid><pubDate>Wed, 16 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;커밋 이름 변경&lt;/h2&gt;
-&lt;h3&gt;바로 이전 커밋의 메시지 변경&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;과거 N번째 커밋의 메시지 변경&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git rebase -i HEAD~N&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이후 원하는 커밋에 pick -&gt; reword 후 메시지 작성&lt;/p&gt;
-&lt;h2&gt;작업 내용 저장&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 현재 작업 영역에 있는 모든 내용 저장
-git stash push
-
-# stash할 때 메시지 지정
-git stash push -m &amp;lt;message&gt;
-
-# 한 개의 파일만 stash (~ Git 2.13)
-git stash push &amp;lt;path-to-file&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Jetpack Compose - remember()와 method reference 사용 시 주의점]]></title><description><![CDATA[TL;DR Compose에서 참조로 인한 골치아픈 문제를 피하려면 가급적 method reference 보다 lambda를 사용하자. Jetpack Compose를 활용해서 UI를 만들다가, 와 method reference…]]></description><link>https://turastory.com/20220215-jetpack-compose-remember-caution/</link><guid isPermaLink="false">https://turastory.com/20220215-jetpack-compose-remember-caution/</guid><pubDate>Tue, 15 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;TL;DR&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cat ~/.kube/config | base64 | pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Jetpack Compose - remember()와 method reference 사용 시 주의점]]></title><description><![CDATA[TL;DR Compose에서 참조로 인한 골치아픈 문제를 피하려면 가급적 method reference 보다 lambda를 사용하자. Jetpack Compose를 활용해서 UI를 만들다가, 와 method reference…]]></description><link>https://turastory.com/jetpack-compose-remember-caution/</link><guid isPermaLink="false">https://turastory.com/jetpack-compose-remember-caution/</guid><pubDate>Tue, 15 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;TL;DR&lt;/h3&gt;
 &lt;p&gt;Compose에서 참조로 인한 골치아픈 문제를 피하려면 가급적 method reference 보다 lambda를 사용하자.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Jetpack Compose를 활용해서 UI를 만들다가, &lt;code class=&quot;language-text&quot;&gt;remember()&lt;/code&gt;와 method reference을 사용하면서 생긴 문제에 대해 정리해보았다.&lt;/p&gt;
@@ -384,7 +384,7 @@ button&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;근데 그렇게 머리아프게 고민할 시간에 그냥 람다를 쓰자.. method reference를 사용했을 때 가독성이 좋은 몇몇 부분들이 있어 여러 방면으로 혼용했었는데,
 Compose를 사용할 때는 이런 문제를 피하기 위해서라도 가급적 람다를 사용해야겠다.&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;좀 더 디테일한 구현상 차이는 &lt;a href=&quot;https://proandroiddev.com/kotlin-lambda-vs-method-reference-fdbd175f6845&quot;&gt;Lambda vs Method Reference&lt;/a&gt; 포스트를 참고.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제]]></title><description><![CDATA[Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 , 를 사용하면 내부 구현이 EmptySet으로 되어 있어서 () merge…]]></description><link>https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-kotlin-spring-data-jpa-with-set/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 &lt;code class=&quot;language-text&quot;&gt;setOf()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Collections.toSet()&lt;/code&gt;를 사용하면 내부 구현이 EmptySet으로 되어 있어서 (&lt;code class=&quot;language-text&quot;&gt;Set&amp;lt;Nothing&gt;&lt;/code&gt;) merge할 때 &lt;code class=&quot;language-text&quot;&gt;ClassCastException&lt;/code&gt;이 발생한다.&lt;/p&gt;
+&lt;p&gt;좀 더 디테일한 구현상 차이는 &lt;a href=&quot;https://proandroiddev.com/kotlin-lambda-vs-method-reference-fdbd175f6845&quot;&gt;Lambda vs Method Reference&lt;/a&gt; 포스트를 참고.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제]]></title><description><![CDATA[Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 , 를 사용하면 내부 구현이 EmptySet으로 되어 있어서 () merge…]]></description><link>https://turastory.com/snippets/kotlin-spring-data-jpa-with-set/</link><guid isPermaLink="false">https://turastory.com/snippets/kotlin-spring-data-jpa-with-set/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Kotlin 환경에서 Spring Data JPA 사용할 때 Entity에 &lt;code class=&quot;language-text&quot;&gt;setOf()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Collections.toSet()&lt;/code&gt;를 사용하면 내부 구현이 EmptySet으로 되어 있어서 (&lt;code class=&quot;language-text&quot;&gt;Set&amp;lt;Nothing&gt;&lt;/code&gt;) merge할 때 &lt;code class=&quot;language-text&quot;&gt;ClassCastException&lt;/code&gt;이 발생한다.&lt;/p&gt;
 &lt;p&gt;대신 &lt;code class=&quot;language-text&quot;&gt;HashSet&lt;/code&gt;을 사용하면 된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 선언&lt;/span&gt;
 &lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
@@ -399,7 +399,7 @@ model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options &lt;s
 &lt;span class=&quot;token annotation builtin&quot;&gt;@Entity&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OtherModel&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;arrayListOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Android Studio에서 keystore 생성 시 주의점]]></title><description><![CDATA[Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다. 혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.]]></description><link>https://turastory.com/snippets/20220210-android-studio-keystore/</link><guid isPermaLink="false">https://turastory.com/snippets/20220210-android-studio-keystore/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Android Studio에서 keystore 생성 시 주의점]]></title><description><![CDATA[Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다. 혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.]]></description><link>https://turastory.com/snippets/android-studio-keystore/</link><guid isPermaLink="false">https://turastory.com/snippets/android-studio-keystore/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어의 패스워드와 키의 패스워드가 다르면 아래와 같은 오류가 발생합니다.&lt;/p&gt;
 &lt;p&gt;혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -462,15 +462,78 @@ model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options &lt;s
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[이터널 리턴 전적 검색 사이트를 만들어보았다]]></title><description><![CDATA[er.op.gg 사이트 작년 10월, 블랙서바이벌: 영원회귀 - 지금은 이터널 리턴이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로…]]></description><link>https://turastory.com/20211218-eternal-return-site/</link><guid isPermaLink="false">https://turastory.com/20211218-eternal-return-site/</guid><pubDate>Sat, 18 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://er.op.gg&quot;&gt;er.op.gg 사이트&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[이터널 리턴 전적 검색 사이트를 만들어보았다]]></title><description><![CDATA[er.op.gg 사이트 작년 10월, 블랙서바이벌: 영원회귀 - 지금은 이터널 리턴이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로…]]></description><link>https://turastory.com/eternal-return-site/</link><guid isPermaLink="false">https://turastory.com/eternal-return-site/</guid><pubDate>Sat, 18 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://er.op.gg&quot;&gt;er.op.gg 사이트&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;작년 10월, &lt;strong&gt;블랙서바이벌: 영원회귀&lt;/strong&gt; - 지금은 &lt;strong&gt;이터널 리턴&lt;/strong&gt;이라고 부르는 게임이 막 세상의 관심을 받던 시기. 당시 나는 산업기능요원 의무로 1달간 훈련소에 다녀와야 했는데, 훈련소에서 나오면 어떤 것들을 할지 곰곰히 생각을 해봤다.&lt;/p&gt;
 &lt;p&gt;고민 끝에 내린 결론은 뭐든 간에 만드는 것보다 연구하는 걸 해보고 싶다는 생각이었다. 그렇게 생각했다.&lt;/p&gt;
 &lt;p&gt;근데 막상 나오니까 또 생각이 바뀌더라. 경제적인 것들에 대한 관심과 함께 내가 만든 사이트나 제품으로 돈을 벌어보고 싶다는 욕심이 생겼다. 친구와 같이 이야기를 하면서, 이터널 리턴이라는 게임의 통계 사이트를 한 번 만들어보기로 했다. 경쟁 대상이 되는 사이트가 아직 존재하지 않았기 때문에 심리적인 부담도 그리 크지는 않았다.&lt;/p&gt;
 &lt;p&gt;마침 훈련소에 가기 전 프로그래머스에서 Node.js 수업을 들었던 터라 어느 정도 자신감도 있었다.&lt;/p&gt;
 &lt;h3&gt;일단 크롤링으로 스타트&lt;/h3&gt;
 &lt;p&gt;처음은 무척 간단했다. 당시 이터널 리턴 홈페이지에는 몇 일 단위로 갱신되는 스프레드시트가 있었는데, 이 내용을 크롤링해서 DB로 저장한 다음, OP.GG처럼 티어를 붙여서 깔끔하게 보여주는 정도였다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./early-stats.png&quot; alt=&quot;Early Stats&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./early-bser-fun.png&quot; alt=&quot;Early bser.fun&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/142683eabc7e071b3f6f658137f06b55/93582/early-stats.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACUUlEQVQ4y5WSWW/TUBCF/dcRj6htQM1OU+ChSBVSN8ETUFUCooY6cRZIncSpnX1zFje142wHnYFE0DeudDPJnZkz38xEqdVqaDQaeHx6vR56vS48z8X/HOXk9AyJw9fYD4YQjsYRDEWwHwzLle+h3zYSjSMciUmM2Ej0j/33KoHYMaJHHxF9+xl7L88QOfqE+PEVnuy8wm78DC8O3yNwcI7d+CkCiQvsxE4QOLjA0703eBZ+t/Uz93niAsrV5QdU9DTux3XclVS4Tgu+24fdreBHLomGWUA28wWdRhGmkUW/rcOsaNB/pqCmLmEamtimVUBFV6FM7x3pfTwaIvntK+6qBvyZh+ViDqNShuNMUK9ZWC4WGA5tYL3CZDKWN/XmOxr1GjQtA9seSLzSbDaxXC4xsG3cqCp8f47FYgHX9WBZNQyHQxjVKh4eHmRRnjeDbdswTROapsGyLLGdTgelUgnKbDYTwtFohGw2Cxbg1qfTKer1OsbjsSR5nofBYADf9+WN/w7GM6ZQKKDb7aJarUIpFouYz+dSNZ1Oi+UlESlYiNZ1XSEkAN8olMlkRDiXywlhuVyGwg9WZGupVEpI1uu1JNLHZMMwRJAiG0J2oaqqFKOlIOEUOijCxOvra3EwiZeCk8lEWmFMq9WS+W5aJiGLsHXS67oOpd1uY7VayXw43H6/L2IkfNwyY+ljN5wrR/R3y7e3t1CozBmShERMYhCXQksaUpCQxVho80ahjeB2KaTjcRwHyWRy2yYTOQ4mk5C/ScbiG8F8Pi8x3DLBKPgLbOqiM4lCcK4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Early Stats&quot;
+        title=&quot;Early Stats&quot;
+        src=&quot;/static/142683eabc7e071b3f6f658137f06b55/f058b/early-stats.png&quot;
+        srcset=&quot;/static/142683eabc7e071b3f6f658137f06b55/c26ae/early-stats.png 158w,
+/static/142683eabc7e071b3f6f658137f06b55/6bdcf/early-stats.png 315w,
+/static/142683eabc7e071b3f6f658137f06b55/f058b/early-stats.png 630w,
+/static/142683eabc7e071b3f6f658137f06b55/40601/early-stats.png 945w,
+/static/142683eabc7e071b3f6f658137f06b55/78612/early-stats.png 1260w,
+/static/142683eabc7e071b3f6f658137f06b55/93582/early-stats.png 1524w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e105fea6c88f353eaabe7516463a3cab/bb051/early-bser-fun.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/ElEQVQ4y5VUTW/aQBD1T+kHpOz3rr0Yr8FgB4cmIi1q1EhJ1bSXSM2hyq05Vb31d79oFoyECig9PA3aYd68+XJSVRUWiwXG4zGEEJBSbu1hCAghoZWAtwJKaRitoZRC4r2PZHk+3CEjewid3yiJzAhIpWDMhpCcWmv0+n30+iew1sI5F52HkKZpjHEuhVQ6JlDaQUqNhByMMVytPuDu5hqciy0h+fbBGLNjCVUQyFKJhAJfvX6Dp58/8PfpMaokBZSEyuKc/wOqglR1ljGOy7aH3DMkpGY4HCJ3KXJrkXkP6iu9HYLf/GcNevMIhUeWWiQ5kY1GuFl9xMPXW4yKgKZpUBQFQgh7Udd1HORsNkNZljHm+7VBU1kkJFs7h/My4HM9hSKVaRrL/h84l8EYi0RJibeM4/60we9FixOl4LMs9urQ2hBBN22KZ5zjTEpkUqyHQpOdjAPOmioSHVuZY6ABJVop9AYM35Yt/jzcoc84yhCOXsyOQhIkBOZKIZObtaGHSTFCHYooX2/O6MXKiFyKWH4kHHCGZXuB28sVtLVxHY6dXrf4cQ+JkDP0R3Nw47oeMsymNc7fX2wXtuvJPnQVdDa2x2bxDNc9fMdxf9Xi15dF/J06e/SL0yXcJhYcg+EUQtu1QiYElrMSn+YVuJBwm5N6OaEA85NI+AwcyfdgnY6sGAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Early bser.fun&quot;
+        title=&quot;Early bser.fun&quot;
+        src=&quot;/static/e105fea6c88f353eaabe7516463a3cab/f058b/early-bser-fun.png&quot;
+        srcset=&quot;/static/e105fea6c88f353eaabe7516463a3cab/c26ae/early-bser-fun.png 158w,
+/static/e105fea6c88f353eaabe7516463a3cab/6bdcf/early-bser-fun.png 315w,
+/static/e105fea6c88f353eaabe7516463a3cab/f058b/early-bser-fun.png 630w,
+/static/e105fea6c88f353eaabe7516463a3cab/40601/early-bser-fun.png 945w,
+/static/e105fea6c88f353eaabe7516463a3cab/bb051/early-bser-fun.png 1212w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;초기 개발 스택으로는 서버에 Javascript 기반의 &lt;strong&gt;Node&lt;/strong&gt;, 그리고 크롤링에 &lt;strong&gt;Python&lt;/strong&gt;을 사용했다. 웹사이트 개발은 내 친구가 맡아줬는데, 제일 무난한 &lt;strong&gt;React&lt;/strong&gt;를 사용했다.&lt;/p&gt;
 &lt;p&gt;당시에 나는 인프라에 대한 지식이 거의 전무한 상태여서, 우선 한 번 이름을 들어보기도 하고, 쓰기 편해보이는 &lt;strong&gt;Heroku&lt;/strong&gt;를 사용했다. DB로는 &lt;strong&gt;MongoDB&lt;/strong&gt;를 사용했다.&lt;/p&gt;
 &lt;p&gt;도메인은 다른 사이트들이 그렇듯 &lt;code class=&quot;language-text&quot;&gt;gg&lt;/code&gt; 도메인을 쓰려고 했다. 근데 가격이 무슨 15만원이나 해서 결국 싸고 저렴한 &lt;code class=&quot;language-text&quot;&gt;fun&lt;/code&gt; 도메인을 쓰기로 했다. 그렇게 정해진 도메인 이름은 &lt;strong&gt;BSER.FUN&lt;/strong&gt;.&lt;/p&gt;
@@ -519,7 +582,7 @@ model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options &lt;s
 &lt;p&gt;개발자라면 누구나 자신이 만든 서비스가 좋은 서비스이고, 많은 사람들이 사용하는 서비스이기를 바랄 것 같다. 그런 의미에서 처음부터 끝까지 사이트를 직접 만들고 운영해봤던 건 무척 값진 경험이었다.&lt;/p&gt;
 &lt;p&gt;생각보다 깊은 기술적 이해도가 필요하지도 않았다. 기능이 몇 개 안되고 일간 방문자수가 고작 1000명대인 사이트에서 아키텍처나 최적화가 무슨 소용이 있을까? 더구나 혼자 개발하는데 말이다.&lt;/p&gt;
 &lt;p&gt;중요한 건 일단 시작하고, 그리고 어떤 형태로든 마무리를 짓는 것 같다. 일단 만들어 놓으면, 관성이라는게 생기고 내 의지와는 상관없이 일이 굴러가기 시작한다.&lt;/p&gt;
-&lt;p&gt;그런 의미에서, 마음 속으로만 생각하고 있던 사이드 프로젝트, 혹은 하다가 포기했던 그 프로젝트! 지금 바로 시작해보는 건 어떨까? 😵‍💫&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2019년 돌아보기]]></title><description><![CDATA[생일을 맞이해서, 지난 1년을 돌아보는 시간을 가져봅니다. (주의: 글이 개판입니다. 그냥 재미로만 보세요.) 퇴사, 그리고 이직 지난…]]></description><link>https://turastory.com/20200111-retrospective-2019/</link><guid isPermaLink="false">https://turastory.com/20200111-retrospective-2019/</guid><pubDate>Sat, 11 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;생일을 맞이해서, 지난 1년을 돌아보는 시간을 가져봅니다. (주의: 글이 개판입니다. 그냥 재미로만 보세요.)&lt;/p&gt;
+&lt;p&gt;그런 의미에서, 마음 속으로만 생각하고 있던 사이드 프로젝트, 혹은 하다가 포기했던 그 프로젝트! 지금 바로 시작해보는 건 어떨까? 😵‍💫&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2019년 돌아보기]]></title><description><![CDATA[생일을 맞이해서, 지난 1년을 돌아보는 시간을 가져봅니다. (주의: 글이 개판입니다. 그냥 재미로만 보세요.) 퇴사, 그리고 이직 지난…]]></description><link>https://turastory.com/retrospective-2019/</link><guid isPermaLink="false">https://turastory.com/retrospective-2019/</guid><pubDate>Sat, 11 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;생일을 맞이해서, 지난 1년을 돌아보는 시간을 가져봅니다. (주의: 글이 개판입니다. 그냥 재미로만 보세요.)&lt;/p&gt;
 &lt;h3&gt;퇴사, 그리고 이직&lt;/h3&gt;
 &lt;p&gt;지난 1월에는 이전에 다니던 회사에서 쫓겨났습니다. 성실하지 못한 태도 때문이었다고 생각하고 있습니다. 당시 이직을 고민하기는 했지만, 갑자기 나오게 될거라고 예상은 하지 못했기 때문에 조금 당황했습니다. 그리고 다음 번에는 반드시 자율 출퇴근을 하는 회사로 가리라 다짐했죠. (농담입니다..)&lt;/p&gt;
 &lt;p&gt;어쨌든 그래서 약 2년간의 회사 생활을 마치고, 백수가 되었습니다. 참으로 생각이 많아지더군요. 일단 시간이 널널한 건 정말 최고였습니다. 하루 종일 게임을 하기도 하고, 평소에 보고싶었던 영화나 애니메이션을 챙겨보기도 했습니다.&lt;/p&gt;
