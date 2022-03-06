@@ -12,5 +12,5 @@ Android Studio에서 릴리즈를 위해 keystore를 생성할 때, 키스토어
 
 혹시라도 동일한 문제를 겪고 있다면 두 패스워드에 동일한 걸 사용해보세요.
 
-!["PKCS12 error"](./20220210-android-studio-keystore/error-pkcs12.png)
-!["Final block error"](./20220210-android-studio-keystore/error-final-block.png)
+!["PKCS12 error"](./error-pkcs12.png)
+!["Final block error"](./error-final-block.png)

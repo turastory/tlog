@@ -9,7 +9,7 @@ tags:
 
 Gradle에서는 모듈 내에서도 소스셋을 나누어 사용할 수 있다. Intellij를 사용했을 때는 기본적으로는 다음과 같이 `main`, `test` 두 가지의 source set이 디폴트로 주어지지만, 상황에 따라 여분의 소스셋을 추가하고 싶을 때도 있다.
 
-![main and test source sets](./20220227-source-set-in-kotlin-gradle-dsl/main-and-test.png)
+![main and test source sets](./main-and-test.png)
 
 나는 유닛 테스트와 통합 테스트를 서로 다른 소스셋으로 구분하고 싶어서 기존의 `test`는 그대로 둔 채로 `integrationTest`라는 소스셋을 새로 추가했다. `build.gradle.kts`에서 아래와 같이 새로운 소스셋을 추가할 수 있다.
 
@@ -57,7 +57,7 @@ idea.module {
 }
 ```
 
-![recognize as test source set](./20220227-source-set-in-kotlin-gradle-dsl/test-source-set.png)
+![recognize as test source set](./test-source-set.png)
 
 마지막으로 해결해야 하는 문제는 새로 만든 소스셋에서 main이 아닌 다른 소스셋(가령 test)의 코드를 가져다쓸 수 있게 하는 것이다. 지금 이대로 사용할 경우 유닛 테스트에서 만든 테스트 데이터를 `integrationTest` 소스셋에서는 사용할 수 없다.
 

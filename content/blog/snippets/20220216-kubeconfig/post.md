@@ -21,7 +21,7 @@ kubeconfig 파일은 클러스터, 유저, 네임스페이스, 인증 등 \**클
 
 GitHub Actions를 이용해서 쿠버네티스에 배포를 하려면 마찬가지로 클러스터에 대한 접속 정보가 필요하기 때문에 이를 위해서 kubeconfig를 사용한다. 어떤 액션을 사용하는지는 자유겠지만, 나는 [k8s-set-context](https://github.com/Azure/k8s-set-context)라는 액션을 사용하기로 했다.
 
-![k8s-set-context](./20220216-kubeconfig/k8s-set-context.png)
+![k8s-set-context](./k8s-set-context.png)
 
 문서를 보면 kubeconfig 파일의 **내용**이 들어가야 한다고 적혀있다. 그런데, 이게 Azure의 쿠버네티스 클러스터 서비스인 AKS 내용만 있어서 구체적으로 어떤 내용이 들어가야 하는지 몰랐다.
 
