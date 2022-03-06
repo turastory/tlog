@@ -1,3 +1,5 @@
+const siteUrl = `https://turastory.com/`;
+
 module.exports = {
   siteMetadata: {
     title: `Turastory`,
@@ -6,7 +8,7 @@ module.exports = {
       summary: `만드는걸 좋아하는 엔지니어입니다.`,
     },
     description: `이런 저런 개발 이야기`,
-    siteUrl: `https://turastory.com/`,
+    siteUrl: siteUrl,
     social: {
       twitter: `turastory`,
     },
@@ -128,5 +130,51 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allMarkdownRemark {
+            nodes {
+              fields {
+                slug
+              }
+              frontmatter {
+                date
+              }
+            }
+          }
+        }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage, allMarkdownRemark }) => {
+          const dateMap = allMarkdownRemark.nodes.reduce((acc, node) => {
+            const path = node.fields.slug;
+            acc[path] = node.frontmatter.date;
+            return acc;
+          }, {});
+
+          return allSitePage.nodes.map((page) => {
+            if (dateMap[page.path] != null) {
+              return { ...page, date: dateMap[page.path] };
+            } else {
+              return page;
+            }
+          });
+        },
+        serialize: ({ path, date }) => {
+          return {
+            url: path,
+            lastmod: date,
+          };
+        },
+      },
+    },
   ],
 };
