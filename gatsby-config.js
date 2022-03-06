@@ -3,9 +3,9 @@ module.exports = {
     title: `Turastory`,
     author: {
       name: `Alan`,
-      summary: `An engineer`,
+      summary: `만드는걸 좋아하는 엔지니어입니다.`,
     },
-    description: `Here I recording my development stories`,
+    description: `이런 저런 개발 이야기`,
     siteUrl: `https://turastory.com/`,
     social: {
       twitter: `turastory`,
