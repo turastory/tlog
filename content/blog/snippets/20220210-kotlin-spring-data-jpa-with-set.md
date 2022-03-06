@@ -1,6 +1,5 @@
 ---
 title: Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제
-date: "2022-02-10"
 category: snippet
 tags:
   - kotlin

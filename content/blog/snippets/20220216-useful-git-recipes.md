@@ -1,6 +1,5 @@
 ---
 title: 유용한 Git 레시피 몇 가지
-date: "2022-02-16"
 category: snippet
 tags:
   - git

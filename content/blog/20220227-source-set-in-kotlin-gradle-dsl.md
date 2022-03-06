@@ -1,6 +1,5 @@
 ---
 title: Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)
-date: "2022-02-27"
 category: snippet
 tags:
   - kotlin

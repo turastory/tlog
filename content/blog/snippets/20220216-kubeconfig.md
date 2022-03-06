@@ -1,6 +1,5 @@
 ---
 title: kubeconfig 정리
-date: "2022-02-16"
 category: snippet
 tags:
   - kubernetes

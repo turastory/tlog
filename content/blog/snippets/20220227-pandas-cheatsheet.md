@@ -1,6 +1,5 @@
 ---
 title: Pandas Cheatsheet
-date: "2022-02-27"
 category: snippet
 tags:
   - python
