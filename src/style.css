@@ -244,6 +244,48 @@ a:hover {
 
 /* Custom classes */
 
+.category {
+  display: flex;
+}
+
+.category-item > * {
+  display: flex;
+  text-decoration: none;
+  font-size: var(--fontSize-1);
+  font-family: var(--font-body);
+  font-weight: bold;
+  margin-right: var(--spacing-4);
+  color: var(--color-text);
+  align-items: center;
+}
+
+.category-item .count {
+  font-size: var(--fontSize-0);
+  margin-left: var(--spacing-1);
+}
+
+.category-item > a {
+  text-decoration: none;
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  bottom: calc(-1 * var(--spacing-2));
+  background-color: var(--color-primary);
+  height: var(--spacing-1);
+  width: 100%;
+}
+
+/* .category div.pointer {
+  position: absolute;
+  background-color: #005b99;
+  border-radius: 2px;
+  bottom: calc(-1 * var(--spacing-1));
+  width: 100%;
+  height: var(--spacing-1);
+} */
+
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);

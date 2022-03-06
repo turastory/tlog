@@ -1,61 +1,34 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 
+import _ from "lodash";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import PostList from "../components/post-list";
+import Categories from "../components/categories";
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location, pageContext }) => {
+  const { category } = pageContext;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteDescription = data.site.siteMetadata?.description || `All posts`;
   const posts = data.allMarkdownRemark.nodes;
+  const filtered = category
+    ? posts.filter((post) => post.frontmatter.category === category)
+    : posts;
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    );
-  }
+  const result = _.groupBy(posts, (post) => post.frontmatter.category);
+  const categories = Object.entries(result).map(([key, values]) => {
+    return {
+      category: key,
+      count: values.length,
+    };
+  });
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map((post) => {
-          const title = post.frontmatter.title || post.fields.slug;
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          );
-        })}
-      </ol>
+      <Seo title={siteDescription} />
+      <Categories categories={categories} activeCategory={category} />
+      <PostList posts={filtered} />
     </Layout>
   );
 };
@@ -67,6 +40,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -76,9 +50,11 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
+          category
+          tags
         }
       }
     }

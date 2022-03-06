@@ -17,6 +17,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           nodes {
             id
+            frontmatter {
+              category
+              tags
+            }
             fields {
               slug
             }
@@ -53,6 +57,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+        },
+      });
+    });
+
+    const categoryPostList = path.resolve(`./src/pages/index.js`);
+    const categories = [
+      ...new Set(posts.map((post) => post.frontmatter.category)),
+    ];
+
+    categories.forEach((category) => {
+      createPage({
+        path: `/category/${category}/`,
+        component: categoryPostList,
+        context: {
+          category,
         },
       });
     });
