@@ -1,7 +1,7 @@
 ---
 title: kubeconfig 정리
 description: 뭐하는 녀석이냐!
-category: snippet
+category: snippets
 tags:
   - kubernetes
   - k8s

@@ -1,7 +1,7 @@
 ---
 title: 유용한 Git 레시피 몇 가지
 description: 이런게 있을까..? 꿀같은 Git 기능들을 알아보자!
-category: snippet
+category: snippets
 tags:
   - git
   - tips

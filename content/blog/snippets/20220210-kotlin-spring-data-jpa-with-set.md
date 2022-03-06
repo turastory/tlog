@@ -1,7 +1,7 @@
 ---
 title: Kotlin 환경에서 Spring Data JPA를 사용할 때 Entity에서 Set 사용 시 ClassCastException 문제
 description: 스프링 열받네..
-category: snippet
+category: snippets
 tags:
   - kotlin
   - socket
