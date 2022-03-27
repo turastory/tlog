@@ -58,6 +58,8 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
+  --color-link: var(--color-primary);
+  --color-link-hover: #1a202c;
   --color-tag: #5f3f33;
   --color-tag-background: #f0eeeb;
   --color-text: #333538;
@@ -356,6 +358,14 @@ a:hover {
 
 .blog-post div.tag {
   margin-bottom: var(--spacing-4);
+}
+
+.blog-post a {
+  color: var(--color-link);
+}
+
+.blog-post a:hover {
+  color: var(--color-link-hover);
 }
 
 .blog-post div.tag a {
