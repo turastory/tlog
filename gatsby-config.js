@@ -1,8 +1,13 @@
+//@ts-check
+
 const siteUrl = `https://blog.turastory.com/`;
 
-module.exports = {
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+const config = {
   siteMetadata: {
-    title: `Turastory`,
+    title: `Alan'space`,
     author: {
       name: `Alan`,
       summary: `만드는걸 좋아하는 엔지니어입니다.`,
@@ -13,7 +18,9 @@ module.exports = {
       twitter: `turastory`,
     },
   },
+  graphqlTypegen: true,
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -178,3 +185,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = config;

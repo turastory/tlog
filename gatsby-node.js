@@ -1,34 +1,29 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const { resolve } = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const blogPost = resolve(`./src/templates/blog-post.tsx`);
 
   // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            frontmatter {
-              category
-              tags
-            }
-            fields {
-              slug
-            }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
+        nodes {
+          id
+          frontmatter {
+            category
+            tags
+          }
+          fields {
+            slug
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild(
@@ -61,7 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       });
     });
 
-    const categoryPostList = path.resolve(`./src/pages/index.js`);
+    const categoryPostList = resolve(`./src/pages/index.tsx`);
     const categories = [
       ...new Set(posts.map((post) => post.frontmatter.category)),
     ];
@@ -105,10 +100,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const lastItem = splitted[splitted.length - 1];
     const dateString = lastItem?.split("-")[0];
     if (dateString != null) {
-      node.frontmatter = {
-        ...node.frontmatter,
-        date: convertDate(dateString),
-      };
+      node.frontmatter["date"] = convertDate(dateString);
       splitted[splitted.length - 1] = lastItem.split("-").slice(1).join("-");
     }
 

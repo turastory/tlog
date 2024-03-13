@@ -1,13 +1,18 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
-
+import type { PageProps } from "gatsby";
+import { graphql } from "gatsby";
 import _ from "lodash";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import PostList from "../components/post-list";
 import Categories from "../components/categories";
+import { IndexDataProps, PageContextProps } from "../components/types";
 
-const BlogIndex = ({ data, location, pageContext }) => {
+export default ({
+  data,
+  pageContext,
+  path,
+}: PageProps<IndexDataProps, PageContextProps>) => {
   const { category } = pageContext;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const siteDescription = data.site.siteMetadata?.description || `All posts`;
@@ -17,23 +22,19 @@ const BlogIndex = ({ data, location, pageContext }) => {
     : posts;
 
   const result = _.groupBy(posts, (post) => post.frontmatter.category);
-  const categories = Object.entries(result).map(([key, values]) => {
-    return {
-      category: key,
-      count: values.length,
-    };
-  });
+  const categories = Object.entries(result).map(([key, values]) => ({
+    category: key,
+    count: values.length,
+  }));
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle} path={path}>
       <Seo title={siteDescription} />
       <Categories categories={categories} activeCategory={category} />
       <PostList posts={filtered} />
     </Layout>
   );
 };
-
-export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -43,7 +44,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
         fields {

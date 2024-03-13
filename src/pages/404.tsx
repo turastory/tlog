@@ -1,14 +1,13 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-
+import { PageProps, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const NotFoundPage = ({ data, location }) => {
+export default ({ data, path }: PageProps<NotFoundPageDataProps>) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle} path={path}>
       <Seo title="404: Not Found" />
       <h1>404: Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
@@ -16,7 +15,13 @@ const NotFoundPage = ({ data, location }) => {
   );
 };
 
-export default NotFoundPage;
+export interface NotFoundPageDataProps {
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
+}
 
 export const pageQuery = graphql`
   query {

@@ -1,21 +1,26 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import PostHeader from "./post-header";
+import { PostHeader } from "./post-header";
+import { IndexDataProps } from "./types";
 
-const PostList = ({ posts }) => {
+interface Props {
+  posts: IndexDataProps["allMarkdownRemark"]["nodes"];
+}
+
+const PostList = ({ posts }: Props) => {
   return (
-    <ol style={{ listStyle: `none` }}>
+    <ol className="m-0 p-0 list-none">
       {posts.map((post) => {
         return (
           <li key={post.fields.slug}>
             <article
-              className="post-list-item"
+              className="post-list-item my-8"
               itemScope
               itemType="http://schema.org/Article"
             >
               <PostHeader post={post} isListItem={true} />
               <section>
                 <p
+                  className="mb-0 text-sm text-text"
                   dangerouslySetInnerHTML={{
                     __html: post.frontmatter.description || post.excerpt,
                   }}
