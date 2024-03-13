@@ -11,6 +11,8 @@ export interface LayoutProps {
 const Layout = ({ title, path, children }: LayoutProps) => {
   const isRootPath = path === "/";
 
+  console.log(path);
+
   const header =
     isRootPath || path.startsWith("/category") ? (
       <h1 className="text-5xl font-enonly font-bold m-0">
