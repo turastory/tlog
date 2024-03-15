@@ -38,6 +38,13 @@
     @apply leading-normal text-base text-text antialiased;
   }
 
+  html,
+  body,
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    @apply h-full;
+  }
+
   html {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none; /* IE and Edge */

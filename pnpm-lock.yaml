@@ -56,6 +56,9 @@ dependencies:
   gatsby-remark-images:
     specifier: ^7.13.1
     version: 7.13.1(gatsby-plugin-sharp@5.13.1)(gatsby@5.13.3)
+  gatsby-remark-katex:
+    specifier: ^7.13.1
+    version: 7.13.1(gatsby@5.13.3)(katex@0.16.9)
   gatsby-remark-prismjs:
     specifier: ^7.13.1
     version: 7.13.1(gatsby@5.13.3)(prismjs@1.29.0)
@@ -74,6 +77,9 @@ dependencies:
   gatsby-transformer-sharp:
     specifier: ^5.13.1
     version: 5.13.1(gatsby-plugin-sharp@5.13.1)(gatsby@5.13.3)(graphql@16.8.1)
+  katex:
+    specifier: ^0.16.9
+    version: 0.16.9
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -4025,6 +4031,11 @@ packages:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
 
+  /commander@8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
+
   /common-path-prefix@3.0.0:
     resolution: {integrity: sha512-QE33hToZseCH3jS0qN96O/bSh3kaw/h+Tq7ngyY9eWDUnTlTNUyqfqvCXioLe5Na5jFsL78ra/wuBU4iuEgd4w==}
 
@@ -6094,6 +6105,24 @@ packages:
       unist-util-visit-parents: 3.1.1
     dev: false
 
+  /gatsby-remark-katex@7.13.1(gatsby@5.13.3)(katex@0.16.9):
+    resolution: {integrity: sha512-zjbWLJ/kUpun71S1Nk2zvAuX5o3bc5ugnUlHR1wNkRzjzsQivFmrVU+nd2f1U4j/1ow19JA0Pv5LHVag/Ye/iA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+      katex: ^0.13.3
+    dependencies:
+      '@babel/runtime': 7.24.0
+      gatsby: 5.13.3(babel-eslint@10.1.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2)
+      katex: 0.16.9
+      rehype-parse: 7.0.1
+      remark-math: 4.0.0
+      unified: 9.2.2
+      unist-util-visit: 2.0.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /gatsby-remark-prismjs@7.13.1(gatsby@5.13.3)(prismjs@1.29.0):
     resolution: {integrity: sha512-xyEri5Xr/ggIhgPaJUpOAp2G2BEAjyCNXP0Qk8olt1t7KvIp1XBdrhF1bvcIQJ3UEfInmt/6ykwY39kFXzkW3g==}
     engines: {node: '>=18.0.0'}
@@ -7484,6 +7513,20 @@ packages:
       object.assign: 4.1.5
       object.values: 1.1.7
 
+  /katex@0.12.0:
+    resolution: {integrity: sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+    dev: false
+
+  /katex@0.16.9:
+    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
+
   /kebab-hash@0.1.2:
     resolution: {integrity: sha512-BTZpq3xgISmQmAVzkISy4eUutsUA7s4IEFlCwOBJjvSFOwyR7I+fza+tBc/rzYWK/NrmFHjfU1IhO3lu29Ib/w==}
     dependencies:
@@ -7843,6 +7886,14 @@ packages:
       - supports-color
     dev: false
 
+  /mdast-util-math@0.1.2:
+    resolution: {integrity: sha512-fogAitds+wH+QRas78Yr1TwmQGN4cW/G2WRw5ePuNoJbBSPJCxIOCE8MTzHgWHVSpgkRaPQTgfzXRE1CrwWSlg==}
+    dependencies:
+      longest-streak: 2.0.4
+      mdast-util-to-markdown: 0.6.5
+      repeat-string: 1.6.1
+    dev: false
+
   /mdast-util-to-hast@10.2.0:
     resolution: {integrity: sha512-JoPBfJ3gBnHZ18icCwHR50orC9kNH81tiR1gs01D8Q5YpV6adHNO9nKNuFBCJQ941/32PT1a63UF/DitmS3amQ==}
     dependencies:
@@ -7998,6 +8049,15 @@ packages:
       micromark-extension-gfm-table: 0.4.3
       micromark-extension-gfm-tagfilter: 0.3.0
       micromark-extension-gfm-task-list-item: 0.3.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /micromark-extension-math@0.1.2:
+    resolution: {integrity: sha512-ZJXsT2eVPM8VTmcw0CPSDeyonOn9SziGK3Z+nkf9Vb6xMPeU+4JMEnO6vzDL10562Favw8Vste74f54rxJ/i6Q==}
+    dependencies:
+      katex: 0.12.0
+      micromark: 2.11.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -9571,6 +9631,13 @@ packages:
     dependencies:
       jsesc: 0.5.0
 
+  /rehype-parse@7.0.1:
+    resolution: {integrity: sha512-fOiR9a9xH+Le19i4fGzIEowAbwG7idy2Jzs4mOrFWBSJ0sNUgy0ev871dwWnbOo371SjgjG4pwzrbgSVrKxecw==}
+    dependencies:
+      hast-util-from-parse5: 6.0.1
+      parse5: 6.0.1
+    dev: false
+
   /relay-runtime@12.0.0:
     resolution: {integrity: sha512-QU6JKr1tMsry22DXNy9Whsq5rmvwr3LSZiiWV/9+DFpuTWvp+WFhobWMc8TC4OjKFfNhEZy7mOiqUAn5atQtug==}
     dependencies:
@@ -9594,6 +9661,15 @@ packages:
     dependencies:
       mdast-util-gfm: 0.1.2
       micromark-extension-gfm: 0.3.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /remark-math@4.0.0:
+    resolution: {integrity: sha512-lH7SoQenXtQrvL0bm+mjZbvOk//YWNuyR+MxV18Qyv8rgFmMEGNuB0TSCQDkoDaiJ40FCnG8lxErc/zhcedYbw==}
+    dependencies:
+      mdast-util-math: 0.1.2
+      micromark-extension-math: 0.1.2
     transitivePeerDependencies:
       - supports-color
     dev: false

@@ -1,7 +1,6 @@
 ---
 title: Gradle 프로젝트에 새로운 Source Set 추가하기 (with Kotlin Gradle DSL)
 description: 용도에 따라 소스를 분리해서 관리하고 싶다면!
-category: snippets
 tags:
   - kotlin
   - gradle

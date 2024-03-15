@@ -25,9 +25,12 @@ const Layout = ({ title, path, children }: LayoutProps) => {
     );
 
   return (
-    <div className="w-[42rem] mx-auto px-4 py-8" data-is-root-path={isRootPath}>
+    <div
+      className="flex flex-col w-[42rem] h-full mx-auto px-4 py-8"
+      data-is-root-path={isRootPath}
+    >
       <header className="mb-8">{header}</header>
-      <main>{children}</main>
+      <main className="flex flex-col grow">{children}</main>
       <footer className="py-6 px-0">
         by <a href="https://github.com/turastory">@turastory</a>{" "}
       </footer>

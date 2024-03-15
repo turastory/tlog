@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, path }: PageProps<BlogPostData>) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article itemScope itemType="http://schema.org/Article">
+      <article className="grow" itemScope itemType="http://schema.org/Article">
         <ExtendedPostHeader post={post} />
         <section
           className="blog-post"
@@ -26,7 +26,9 @@ const BlogPostTemplate = ({ data, path }: PageProps<BlogPostData>) => {
         />
       </article>
       <nav>
-        <ul className={tlsx("flex-wrap justify-between list-none p-0 m-0")}>
+        <ul
+          className={tlsx("flex flex-wrap justify-between list-none p-0 m-0")}
+        >
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

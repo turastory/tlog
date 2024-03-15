@@ -7,7 +7,7 @@ interface Props {
     category: string;
     count: number;
   }[];
-  activeCategory: string;
+  activeCategory?: string;
 }
 
 const Categories = ({ categories, activeCategory }: Props) => {
@@ -36,7 +36,7 @@ const Categories = ({ categories, activeCategory }: Props) => {
           >
             <Link
               className="relative"
-              to={isAll ? `/` : `/category/${category}`}
+              to={isAll ? `/` : `/${category}`}
               itemProp="url"
             >
               <span className="font-bold" itemProp="category">

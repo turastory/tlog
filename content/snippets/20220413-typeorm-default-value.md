@@ -1,6 +1,5 @@
 ---
 title: TypeORM에서 default value 사용 시 주의점
-category: snippets
 tags:
   - nestjs
   - typeorm

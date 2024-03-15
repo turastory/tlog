@@ -24,5 +24,6 @@ export interface IndexDataProps {
 
 // Check /gatsby-node.ts for the usage of this type
 export interface PageContextProps {
-  category: string;
+  category?: string;
+  tag?: string;
 }

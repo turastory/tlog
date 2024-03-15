@@ -37,7 +37,10 @@ module.exports = {
         primary: "#005b99",
         link: "#005b99",
         "link-hover": "#1a202c",
-        tag: "#5f3f33",
+        tag: {
+          DEFAULT: "#5f3f33",
+          light: "#7f5f53",
+        },
         "tag-background": "#f0eeeb",
         text: {
           DEFAULT: "#333538",

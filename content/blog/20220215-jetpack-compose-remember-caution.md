@@ -1,7 +1,6 @@
 ---
 title: Jetpack Compose - remember()와 method reference 사용 시 주의점
 description: Compose에서 참조로 인한 골치 아픈 문제를 피하려면 가급적 method reference 보다 lambda를 사용하자.
-category: post
 tags:
   - kotlin
   - android

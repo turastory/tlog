@@ -1,7 +1,6 @@
 ---
 title: MSA를 위한 메시지 브로커 고르기
 description: SQS, RabbitMQ, Redis, ... 승자는?
-category: post
 tags:
   - microservice
   - message-brocker

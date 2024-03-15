@@ -26,24 +26,26 @@ export const ExtendedPostHeader = ({ post }: PostHeaderProps) => {
       <div className="grid grid-cols-[4rem_1fr] mt-4 mb-8 text-sm gap-2 bg-slate-50 p-4 rounded-lg">
         <span className="font-bold">카테고리</span>
         <span className="text-sm font-bold" itemProp="category ">
-          <Link to={`/category/${category}/`} itemProp="url">
+          <Link to={`/${category}/`} itemProp="url">
             {category.toUpperCase()}{" "}
           </Link>
         </span>
-        <span className="font-bold">작성일</span>
-        <span className="text-text-light">{date}</span>
-        <span className="font-bold">태그</span>
-        <div>
-          {tags ? (
-            <div className="inline mb-4">
+        {date ? (
+          <>
+            <span className="font-bold">작성일</span>
+            <span className="text-text-light">{date}</span>
+          </>
+        ) : null}
+        {tags && tags.length > 0 ? (
+          <>
+            <span className="font-bold">태그</span>
+            <div className="inline gap-1">
               {tags.map((tag) => (
                 <Tag key={tag} tag={tag} />
               ))}
             </div>
-          ) : (
-            ""
-          )}
-        </div>
+          </>
+        ) : null}
       </div>
     </header>
   );
@@ -60,7 +62,7 @@ export const PostHeader = ({ post }: PostHeaderProps) => {
         </Link>
       </h2>
       <div className="inline-flex items-center gap-2">
-        <Link to={`/category/${category}/`} itemProp="url">
+        <Link to={`/${category}/`} itemProp="url">
           <span className="text-sm font-bold" itemProp="category ">
             {category.toUpperCase()}{" "}
           </span>

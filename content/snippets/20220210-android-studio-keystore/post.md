@@ -1,6 +1,5 @@
 ---
 title: Android Studio에서 keystore 생성 시 주의점
-category: snippets
 tags:
   - android
   - androidstudio

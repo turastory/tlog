@@ -1,6 +1,58 @@
 const { resolve } = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({
+      node,
+      getNode,
+    });
+
+    // Add default values for frontmatter fields
+    node.frontmatter["tags"] = node.frontmatter["tags"] ?? [];
+
+    const parent = getNode(node.parent);
+    const category = parent["sourceInstanceName"];
+
+    if (category != null) {
+      node.frontmatter["category"] = category;
+
+      if (category == "math") {
+        const slug = `/${category}${value}`;
+        createNodeField({
+          name: `slug`,
+          node,
+          value: slug,
+        });
+      } else {
+        const splitted = value
+          .split("/")
+          .filter((item) => item != "post" && item != "");
+
+        const lastItem = splitted[splitted.length - 1];
+        const dateString = lastItem?.split("-")[0];
+        if (dateString != null) {
+          node.frontmatter["date"] = convertDate(dateString);
+          splitted[splitted.length - 1] = lastItem
+            .split("-")
+            .slice(1)
+            .join("-");
+        }
+
+        const slug = `/${category}/${splitted.join("/")}/`;
+
+        createNodeField({
+          name: `slug`,
+          node,
+          value: slug,
+        });
+      }
+    }
+  }
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
@@ -50,23 +102,53 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: blogPost,
         context: {
           id: post.id,
+          category: post.frontmatter.category,
+          tags: post.frontmatter.tags,
           previousPostId,
           nextPostId,
         },
       });
     });
 
-    const categoryPostList = resolve(`./src/pages/index.tsx`);
+    const postList = resolve(`./src/pages/index.tsx`);
     const categories = [
       ...new Set(posts.map((post) => post.frontmatter.category)),
     ];
 
     categories.forEach((category) => {
       createPage({
-        path: `/category/${category}/`,
-        component: categoryPostList,
+        path: `/${category}/`,
+        component: postList,
         context: {
           category,
+        },
+      });
+
+      posts
+        .filter((post) => post.frontmatter.category == category)
+        .flatMap((post) => post.frontmatter.tags)
+        .forEach((tag) => {
+          createPage({
+            path: `/${category}/tags/${tag}/`,
+            component: postList,
+            context: {
+              category,
+              tag,
+            },
+          });
+        });
+    });
+
+    const tags = [
+      ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
+    ];
+
+    tags.forEach((tag) => {
+      createPage({
+        path: `/tags/${tag}/`,
+        component: postList,
+        context: {
+          tag,
         },
       });
     });
@@ -83,36 +165,6 @@ function convertDate(dateString) {
     dateString.slice(6)
   );
 }
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({
-      node,
-      getNode,
-    });
-
-    const splitted = value
-      .split("/")
-      .filter((item) => item != "post" && item != "");
-
-    const lastItem = splitted[splitted.length - 1];
-    const dateString = lastItem?.split("-")[0];
-    if (dateString != null) {
-      node.frontmatter["date"] = convertDate(dateString);
-      splitted[splitted.length - 1] = lastItem.split("-").slice(1).join("-");
-    }
-
-    const slug = `/${splitted.join("/")}/`;
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value: slug,
-    });
-  }
-};
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -148,6 +200,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      tags: [String]
     }
 
     type Fields {
