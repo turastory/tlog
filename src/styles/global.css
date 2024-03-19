@@ -125,6 +125,15 @@
     @apply mt-12 mb-6;
   }
 
+  .blog-post blockquote h1,
+  .blog-post blockquote h2,
+  .blog-post blockquote h3,
+  .blog-post blockquote h4,
+  .blog-post blockquote h5,
+  .blog-post blockquote h6 {
+    @apply mt-0 text-text-light;
+  }
+
   .blog-post p {
     @apply p-0 m-0 mb-4 leading-relaxed;
   }

@@ -26,6 +26,7 @@ const BlogPostTemplate = ({ data, path }: PageProps<BlogPostData>) => {
         />
       </article>
       <nav>
+        <div className="w-full mt-16 mb-8 h-[0.5px] bg-black" />
         <ul
           className={tlsx("flex flex-wrap justify-between list-none p-0 m-0")}
         >
@@ -106,7 +107,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 80)
       html
       frontmatter {
         date(formatString: "YYYY-MM-DD")
