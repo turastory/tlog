@@ -57,7 +57,7 @@
   }
 
   hr {
-    @apply bg-accent h-[1px] border-none;
+    @apply bg-accent h-[1px] border-none my-4;
   }
 
   a {

@@ -18,8 +18,9 @@ $$
 
 $$
 \begin{aligned}
-1 - \frac{1}{a} &= \frac{a-1}{a} \\
-\frac{a}{a-1} &= \frac{a-1}{a-1} + \frac{1}{a-1} = 1 + \frac{1}{a-1} \\
+1 - \frac{1}{n} &= \frac{n-1}{n} \\
+\frac{n}{n-1} &= \frac{n-1}{n-1} + \frac{1}{n-1} = 1 + \frac{1}{n-1} \\
+\frac{1}{n(n+1)} &= \frac{1}{n} - \frac{1}{n+1}
 \end{aligned}
 $$
 
@@ -35,6 +36,7 @@ $$
 > $$
 >
 > Recall that:
+>
 > $$
 > e \coloneqq \lim_{n \to \infty} (1+\frac{1}{n})^n
 > $$
@@ -44,3 +46,27 @@ $$
 > $$
 > \lim_{n \to \infty} (1-\frac{1}{n})^n = \frac{1}{e}
 > $$
+
+#### Absolute values
+
+For $a, b\in \mathbb{R}$:
+
+$$
+\begin{alignat*}
+|a| = |-a| \\
+ab \leq |a||b| \\
+\sqrt{a^2} = |a| \\
+-|a| \leq a \leq |a| \\
+\forall r > 0, |a| \leq r \iff -r \leq a \leq r \\
+\end{alignat*}
+$$
+
+From the triangle inequality, for $a, b, c \in \mathbb{R}$:
+
+$$
+\begin{align*}
+|a+b| &\leq |a| + |b| \\
+|a-b| &\leq |a| + |b| \\
+|a-b| &\leq |a-c| + |c-b| \\
+\end{align*}
+$$
