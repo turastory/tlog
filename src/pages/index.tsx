@@ -62,7 +62,7 @@ export default ({
 };
 
 export const pageQuery = graphql`
-  query {
+  query IndexPage {
     site {
       siteMetadata {
         title

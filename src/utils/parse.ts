@@ -1,29 +1,32 @@
 export type ParsedResult = {
   originalString: string;
+  fileName: string;
   date?: string;
   language?: string;
+  [key: string]: string | undefined;
 };
 
-export function parseFilePath(str: string): ParsedResult {
-  const result: ParsedResult = { originalString: str };
-
-  // Regular expression to match the optional date and language
-  // Assumes the date is formatted as YYYYMMDD and comes after a slash
-  // and the optional language is a 2-letter code after a dash at the end
-  const regex = /\/(\d{8})?.*?(-([a-z]{2}))?\/$/;
-  const matches = str.match(regex);
-
-  if (matches) {
-    // If there's a date match, it will be in index 1
-    if (matches[1]) {
-      result.date = matches[1];
-    }
-
-    // If there's a language match, it will be in index 3
-    if (matches[3]) {
-      result.language = matches[3];
-    }
+export function parseFilePath(filePath: string): ParsedResult {
+  const match = filePath.match(/\/(?:(\d{8})-)?(.*?)(?:-(\w{2}))?\//);
+  if (!match) {
+    throw new Error(`Invalid file path: ${filePath}`);
   }
 
-  return result;
+  const [, date, fileName, language] = match;
+
+  return {
+    originalString: filePath,
+    date: date ?? undefined,
+    fileName,
+    language: language ?? undefined,
+  };
+}
+
+/**
+ * Check if the given text contains Korean characters. (10% as a threshold)
+ */
+export function containsKorean(text: string): boolean {
+  const totalChars: number = text.length;
+  const koreanChars: number = (text.match(/[\u3131-\uD79D]/g) || []).length; // Korean Unicode range
+  return koreanChars / totalChars > 0.1;
 }

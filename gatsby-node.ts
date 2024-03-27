@@ -1,48 +1,55 @@
-const { resolve } = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+import { resolve } from "path";
+import { createFilePath } from "gatsby-source-filesystem";
+import { convertDate } from "./src/utils/date";
+import { GatsbyNode } from "gatsby";
+import { containsKorean, parseFilePath } from "./src/utils/parse";
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({
-      node,
-      getNode,
-    });
+export const onCreateNode: GatsbyNode<Queries.MarkdownRemark>["onCreateNode"] =
+  async ({ node: _node, actions, getNode }) => {
+    const { createNodeField } = actions;
 
-    // Add default values for frontmatter fields
-    node.frontmatter["tags"] = node.frontmatter["tags"] ?? [];
+    // const node = _node as Queries.MarkdownRemark;
+    const node = {
+      ..._node,
+      frontmatter: {
+        ..._node.frontmatter,
+      },
+    };
 
-    const parent = getNode(node.parent);
-    const category = parent["sourceInstanceName"];
+    if (node.internal.type === `MarkdownRemark`) {
+      const value = createFilePath({
+        node,
+        getNode,
+      });
 
-    if (category != null) {
-      node.frontmatter["category"] = category;
+      // Add default values for frontmatter fields
+      node.frontmatter["tags"] = node.frontmatter["tags"] ?? [];
 
-      if (category == "math") {
-        const slug = `/${category}${value}`;
-        createNodeField({
-          name: `slug`,
-          node,
-          value: slug,
-        });
-      } else {
-        const splitted = value
-          .split("/")
-          .filter((item) => item != "post" && item != "");
+      const parent = node.parent
+        ? (getNode(node.parent) as Queries.File | undefined)
+        : null;
+      const category = parent?.sourceInstanceName ?? null;
 
-        const lastItem = splitted[splitted.length - 1];
-        const dateString = lastItem?.split("-")[0];
-        if (dateString != null) {
-          node.frontmatter["date"] = convertDate(dateString);
-          splitted[splitted.length - 1] = lastItem
-            .split("-")
-            .slice(1)
-            .join("-");
+      if (category != null) {
+        node.frontmatter["category"] = category;
+
+        const parsedResult = parseFilePath(value);
+
+        // TODO: actually use this language data
+        if (parsedResult.language == null) {
+          parsedResult.language = containsKorean(node.rawMarkdownBody ?? "")
+            ? "ko"
+            : "en";
         }
 
-        const slug = `/${category}/${splitted.join("/")}/`;
+        if (parsedResult.date != null) {
+          node.frontmatter["date"] = convertDate(parsedResult.date);
+        }
 
+        const slugWithoutCategory = parsedResult.fileName;
+        const slug = `/${category}/${slugWithoutCategory}/`;
         createNodeField({
           name: `slug`,
           node,
@@ -50,10 +57,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         });
       }
     }
-  }
-};
+  };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+  reporter,
+}) => {
   const { createPage } = actions;
 
   // Define a template for blog post
@@ -61,7 +71,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
-    {
+    query CreatePageQuery {
       allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
         nodes {
           id
@@ -85,7 +95,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  const posts = (result.data as any).allMarkdownRemark.nodes as any[];
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -155,27 +165,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
-// Convert YYYYMMDD -> YYYY-MM-DD
-function convertDate(dateString) {
-  return (
-    dateString.slice(0, 4) +
-    "-" +
-    dateString.slice(4, 6) +
-    "-" +
-    dateString.slice(6)
-  );
-}
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
+  async ({ actions }) => {
+    const { createTypes } = actions;
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
+    // Explicitly define the siteMetadata {} object
+    // This way those will always be defined even if removed from gatsby-config.js
 
-  // Explicitly define the siteMetadata {} object
-  // This way those will always be defined even if removed from gatsby-config.js
-
-  // Also explicitly define the Markdown frontmatter
-  // This way the "MarkdownRemark" queries will return `null` even when no
-  // blog posts are stored inside "content/blog" instead of returning an error
-  createTypes(`
+    // Also explicitly define the Markdown frontmatter
+    // This way the "MarkdownRemark" queries will return `null` even when no
+    // blog posts are stored inside "content/blog" instead of returning an error
+    createTypes(`
     type SiteSiteMetadata {
       author: Author
       siteUrl: String
@@ -207,4 +207,4 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `);
-};
+  };

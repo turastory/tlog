@@ -2,7 +2,7 @@ import clsx from "clsx";
 import * as React from "react";
 
 export const LOCAL_STORAGE_LANG = "lang";
-export const LANGUAGES = ["EN", "KR"];
+export const LANGUAGES = ["en", "kr"];
 
 const LanguageContext = React.createContext<{
   language: string;
@@ -22,13 +22,13 @@ export const LanguageProvider = ({
   const getInitialLanguage = () => {
     if (typeof window !== "undefined")
       return localStorage.getItem(LOCAL_STORAGE_LANG) || LANGUAGES[0];
-    return "EN";
+    return LANGUAGES[0];
   };
 
   const [language, setLanguage] = React.useState(getInitialLanguage);
 
   const setNewLanguage = (newLanguage: string) => {
-    // const newLanguage = getInitialLanguage() === "EN" ? "KR" : "EN";
+    // const newLanguage = getInitialLanguage() === "en" ? "kr" : "en";
     setLanguage(newLanguage);
     if (typeof window !== "undefined")
       localStorage.setItem(LOCAL_STORAGE_LANG, newLanguage);
@@ -59,7 +59,7 @@ const LanguageSwitcher = () => {
       >
         <span
           className={`absolute left-0 top-0 w-1/2 h-full bg-blue-500 rounded-full transition-transform duration-300 ${
-            language === "EN"
+            language === "en"
               ? "transform translate-x-0"
               : "transform translate-x-full"
           }`}
@@ -70,7 +70,7 @@ const LanguageSwitcher = () => {
             language === LANGUAGES[1] ? "text-text" : "text-white"
           )}
         >
-          {LANGUAGES[0]}
+          {LANGUAGES[0].toUpperCase()}
         </span>
         <span
           className={clsx(
@@ -78,7 +78,7 @@ const LanguageSwitcher = () => {
             language === LANGUAGES[0] ? "text-text" : "text-white"
           )}
         >
-          {LANGUAGES[1]}
+          {LANGUAGES[1].toUpperCase()}
         </span>
       </button>
     </div>

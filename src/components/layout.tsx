@@ -6,7 +6,7 @@ import LanguageSwitcher, { LanguageProvider } from "./language-switcher";
 export interface LayoutProps {
   path: string;
   title: string;
-  showLanguageSwitcher: boolean;
+  showLanguageSwitcher?: boolean;
   children: ReactNode;
 }
 

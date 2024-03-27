@@ -24,7 +24,7 @@ export interface NotFoundPageDataProps {
 }
 
 export const pageQuery = graphql`
-  query {
+  query NotFoundPageQuery {
     site {
       siteMetadata {
         title

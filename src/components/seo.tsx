@@ -18,7 +18,7 @@ interface Props {
 
 const Seo = ({ description = "", lang = "en", meta = [], title }: Props) => {
   const { site } = useStaticQuery(graphql`
-    query {
+    query SeoQuery {
       site {
         siteMetadata {
           title
