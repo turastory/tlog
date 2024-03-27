@@ -5,14 +5,18 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { ExtendedPostHeader } from "../components/post-header";
 import { tlsx } from "../utils/tlsx";
+import { useLanguage } from "../components/language-switcher";
 
 const BlogPostTemplate = ({ data, path }: PageProps<BlogPostData>) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
 
+  // TODO: contents based on the language
+  const { language } = useLanguage();
+
   return (
-    <Layout title={siteTitle} path={path}>
+    <Layout title={siteTitle} path={path} showLanguageSwitcher>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
