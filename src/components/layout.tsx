@@ -18,26 +18,17 @@ const Layout = ({
 }: LayoutProps) => {
   const isRootPath = path === "/";
 
-  const header =
-    isRootPath ||
-    path.startsWith("/category") ||
-    compact(path.split("/")).length < 2 ? (
-      <h1 className="text-5xl font-enonly font-bold m-0">
-        <Link to="/">{title}</Link>
-      </h1>
-    ) : (
-      <h1 className="text-xl font-enonly font-bold m-0">
-        <Link to="/">{title}</Link>
-      </h1>
-    );
-
   return (
     <div
       className="flex flex-col w-[42rem] h-full mx-auto px-4 py-8"
       data-is-root-path={isRootPath}
     >
       <div className="flex flex-row justify-between items-start">
-        <header className="mb-8">{header}</header>
+        <header className="mb-8">
+          <h1 className="text-5xl font-enonly font-bold m-0">
+            <Link to="/">{title}</Link>
+          </h1>
+        </header>
         {/* TODO: Add language switcher after content management is resolved */}
         {/* {showLanguageSwitcher && <LanguageSwitcher />} */}
       </div>
