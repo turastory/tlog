@@ -14,12 +14,13 @@ export default ({
   pageContext,
   path,
 }: PageProps<IndexDataProps, PageContextProps>) => {
-  const { category, tag } = pageContext;
+  const { tag } = pageContext;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const siteDescription = data.site.siteMetadata?.description || `All posts`;
   let posts = data.allMarkdownRemark.nodes;
   let filteredPosts = posts;
 
+  const category = pageContext.category ?? "blog";
   const categories = Object.entries(
     _.countBy(posts.map((post) => post.frontmatter.category))
   ).map(([category, count]) => ({ category, count }));

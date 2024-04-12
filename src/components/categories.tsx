@@ -15,15 +15,12 @@ const Categories = ({ categories, activeCategory }: Props) => {
     .map((category) => category.count)
     .reduce((prev, curr) => prev + curr, 0);
 
-  const allInserted = [{ category: "All", count: totalCount }, ...categories];
+  const allInserted = [...categories];
 
   return (
     <div className="flex pb-4">
       {allInserted.map(({ category, count }) => {
-        const isAll = category === "All";
-        const isActive = isAll
-          ? activeCategory == null
-          : category === activeCategory;
+        const isActive = category === activeCategory;
         return (
           <div
             className={tlsx(
@@ -34,11 +31,7 @@ const Categories = ({ categories, activeCategory }: Props) => {
             )}
             key={category}
           >
-            <Link
-              className="relative"
-              to={isAll ? `/` : `/${category}`}
-              itemProp="url"
-            >
+            <Link className="relative" to={`/${category}`} itemProp="url">
               <span className="font-bold" itemProp="category">
                 {category.toUpperCase()}
               </span>

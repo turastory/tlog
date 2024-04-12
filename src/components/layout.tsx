@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { ReactNode } from "react";
-import LanguageSwitcher, { LanguageProvider } from "./language-switcher";
+import { compact } from "lodash";
 
 export interface LayoutProps {
   path: string;
@@ -19,7 +19,9 @@ const Layout = ({
   const isRootPath = path === "/";
 
   const header =
-    isRootPath || path.startsWith("/category") ? (
+    isRootPath ||
+    path.startsWith("/category") ||
+    compact(path.split("/")).length < 2 ? (
       <h1 className="text-5xl font-enonly font-bold m-0">
         <Link to="/">{title}</Link>
       </h1>
