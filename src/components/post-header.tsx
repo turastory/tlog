@@ -39,7 +39,7 @@ export const ExtendedPostHeader = ({ post }: PostHeaderProps) => {
         {tags && tags.length > 0 ? (
           <>
             <span className="font-bold">태그</span>
-            <div className="inline gap-1">
+            <div className="flex inline gap-1">
               {tags.map((tag) => (
                 <Tag key={tag} tag={tag} />
               ))}
